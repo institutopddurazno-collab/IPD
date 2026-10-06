@@ -1,6 +1,6 @@
 # Folleto IPD · Mes de la Salud Mental
 
-Tríptico del Instituto Psicopedagógico de Durazno para el evento de Salud Mental. Sigue el estilo del folleto anterior del IPD: fondo blanco con manchas pastel, hojas, títulos en píldoras, íconos en círculos de color y olas al pie. El verde es el color principal porque es el color del mes este año, y el rosa, el turquesa y el azul vienen del logo.
+Tríptico del Instituto Psicopedagógico de Durazno para el evento de Salud Mental. Sigue el estilo del folleto anterior del IPD: fondo blanco con manchas pastel, hojas, títulos en píldoras, íconos en círculos de color y olas al pie, con un relieve suave (degradados y sombras difusas) que le da volumen. El verde es el color principal porque es el color del mes este año, y el rosa, el turquesa y el azul vienen del logo.
 
 ## Archivos para usar
 
@@ -55,7 +55,7 @@ npm run exportar
 - El titular de la portada comunica un beneficio, y cada especialidad lleva una línea que explica para qué sirve.
 - Hay datos concretos como prueba: 33 años, 25 años de talleres, 7 especialidades y 5 convenios.
 - Tríptico con la solapa 3 mm más angosta (97 / 100 / 100 mm) y un solo foco por panel.
-- Dos familias tipográficas: Nunito, redondeada como la del folleto anterior, para títulos y texto, y Caveat, manuscrita, solo para la frase de la portada.
+- Dos familias tipográficas: Outfit, geométrica y moderna, para títulos y texto, y Caveat, manuscrita, solo para la frase de la portada.
 - El texto corrido va de 10,5 a 12,5 pt y nada baja de 7,5 pt. No hay texto sobre fotos y todo está alineado a la izquierda.
 - Margen duplicado junto a cada pliegue (8 mm por lado) y el contenido a 9 mm o más del corte.
 - 3 mm de sangrado y fuentes incrustadas en el PDF (TrueType).
@@ -65,6 +65,7 @@ npm run exportar
 **Queda para la imprenta o el IPD**
 
 - **Color:** el PDF está en RGB. Si la imprenta pide CMYK o PDF/X-1a, que lo convierta con su perfil de color, y pedirle una prueba impresa para revisar los verdes.
+- **Sombras:** las sombras suaves del relieve usan transparencias, que el PDF guarda como máscaras a 300 ppp. Si la imprenta aplana el archivo, que lo haga a 300 ppp o más.
 - **Texto en negro puro:** el texto es azul marino, no negro 100 % K. En los tamaños que usa el folleto no da problemas de registro, pero conviene consultarlo con la imprenta.
 - **Papel sugerido:** estucado mate de 150 a 170 g/m², que se lee mejor que el brillo.
 - **Prueba física:** imprimir una copia, doblarla, leerla entera y escanear el QR con un celular. Que otra persona la revise.
@@ -73,5 +74,5 @@ npm run exportar
 ## Créditos
 
 - Íconos: [Tabler Icons](https://tabler.io/icons) (MIT).
-- Tipografías: Nunito y Caveat (SIL Open Font License; las licencias están en `fuentes/`).
+- Tipografías: Outfit y Caveat (SIL Open Font License; las licencias están en `fuentes/`).
 - El logo, el lazo, las hojas, las olas y las ilustraciones están dibujados en SVG. El logo se redibujó a partir del folleto anterior: si el IPD tiene el archivo original, conviene reemplazarlo.

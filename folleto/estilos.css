@@ -2,14 +2,16 @@
    Tríptico A4 apaisado (297 × 210 mm) con pliegue de rodillo y 3 mm de sangrado.
    Estilo del folleto de referencia del IPD: fondo blanco con manchas pastel, hojas,
    títulos en píldoras, íconos en círculos de color y olas al pie.
-   El verde es el color principal; rosa, turquesa y azul vienen del logo. */
+   El verde es el color principal; rosa, turquesa y azul vienen del logo.
+   Un relieve suave (degradados y sombras difusas) da volumen a círculos, píldoras y tarjetas. */
 
 /* Fuentes estáticas para que el PDF las incruste como TrueType */
-@font-face { font-family: "Nunito"; src: url("fuentes/nunito-400.woff2") format("woff2"); font-weight: 400; font-display: block; }
-@font-face { font-family: "Nunito"; src: url("fuentes/nunito-600.woff2") format("woff2"); font-weight: 600; font-display: block; }
-@font-face { font-family: "Nunito"; src: url("fuentes/nunito-700.woff2") format("woff2"); font-weight: 700; font-display: block; }
-@font-face { font-family: "Nunito"; src: url("fuentes/nunito-800.woff2") format("woff2"); font-weight: 800; font-display: block; }
-@font-face { font-family: "Nunito"; src: url("fuentes/nunito-900.woff2") format("woff2"); font-weight: 900; font-display: block; }
+@font-face { font-family: "Outfit"; src: url("fuentes/outfit-400.woff2") format("woff2"); font-weight: 400; font-display: block; }
+@font-face { font-family: "Outfit"; src: url("fuentes/outfit-500.woff2") format("woff2"); font-weight: 500; font-display: block; }
+@font-face { font-family: "Outfit"; src: url("fuentes/outfit-600.woff2") format("woff2"); font-weight: 600; font-display: block; }
+@font-face { font-family: "Outfit"; src: url("fuentes/outfit-700.woff2") format("woff2"); font-weight: 700; font-display: block; }
+@font-face { font-family: "Outfit"; src: url("fuentes/outfit-800.woff2") format("woff2"); font-weight: 800; font-display: block; }
+@font-face { font-family: "Outfit"; src: url("fuentes/outfit-900.woff2") format("woff2"); font-weight: 900; font-display: block; }
 @font-face { font-family: "Caveat"; src: url("fuentes/caveat-700.woff2") format("woff2"); font-weight: 700; font-display: block; }
 
 :root {
@@ -31,8 +33,8 @@
   --papel: #ffffff;
   --mesa: #dfe7ea;
 
-  --f-titulo: "Nunito", "Segoe UI", Arial, sans-serif;
-  --f-texto: "Nunito", "Segoe UI", Arial, sans-serif;
+  --f-titulo: "Outfit", "Segoe UI", Arial, sans-serif;
+  --f-texto: "Outfit", "Segoe UI", Arial, sans-serif;
   --f-mano: "Caveat", "Segoe Script", "Comic Sans MS", cursive;
 
   --sangrado: 3mm;
@@ -373,7 +375,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ================= SOLAPA ================= */
 .solapa__titulo { font-size: 23pt; }
-.solapa__entrada { margin-top: 4mm; font-weight: 600; font-size: 12pt; }
+.solapa__entrada { margin-top: 4mm; font-weight: 500; font-size: 12pt; }
 .senales {
   margin-top: 4mm;
   display: flex;
@@ -386,7 +388,7 @@ a { color: inherit; text-decoration: none; }
   grid-template-columns: 6mm 1fr;
   gap: 2.8mm;
   align-items: start;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 11.5pt;
   line-height: 1.25;
 }
@@ -437,13 +439,13 @@ a { color: inherit; text-decoration: none; }
 .abrir .icono { font-size: 13pt; stroke-width: 2.4; }
 
 /* ================= INTERIOR IZQUIERDO: la promesa ================= */
-.promesa__titulo { margin-top: 2.5mm; font-size: 17.5pt; }
-.promesa__texto { margin-top: 5mm; font-size: 12pt; }
+.promesa__titulo { margin-top: 2.5mm; font-size: 19pt; }
+.promesa__texto { margin-top: 6mm; font-size: 12.5pt; }
 .cifras {
-  margin-top: 6mm;
+  margin-top: 8mm;
   display: flex;
   flex-direction: column;
-  gap: 3.5mm;
+  gap: 5mm;
 }
 .cifras li {
   display: grid;
@@ -463,7 +465,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 17pt;
   font-variant-numeric: lining-nums tabular-nums;
 }
-.cifras__texto { font-weight: 700; font-size: 12pt; line-height: 1.2; }
+.cifras__texto { font-weight: 600; font-size: 12.5pt; line-height: 1.2; }
 .familia {
   right: calc(var(--pad-der) - 2mm);
   bottom: calc(var(--sangrado) + 9mm);
@@ -503,7 +505,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ================= INTERIOR DERECHO: el pedido ================= */
 .pedido__titulo { margin-top: 2.5mm; font-size: 22pt; }
-.pedido__texto { margin-top: 4mm; font-weight: 600; font-size: 12pt; }
+.pedido__texto { margin-top: 4mm; font-weight: 500; font-size: 12pt; }
 .llamada {
   margin-top: 7mm;
   display: grid;
@@ -519,7 +521,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--tinta);
   white-space: nowrap;
 }
-.llamada__direccion { display: block; margin-top: 0.8mm; font-weight: 600; font-size: 10.5pt; color: var(--tinta-suave); }
+.llamada__direccion { display: block; margin-top: 0.8mm; font-weight: 500; font-size: 10.5pt; color: var(--tinta-suave); }
 
 .convenios { margin-top: 8mm; padding-top: 4mm; padding-bottom: 5mm; }
 .encabezado {
@@ -543,7 +545,7 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   align-items: center;
   gap: 2.5mm;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 11.5pt;
   line-height: 1.2;
 }
@@ -564,7 +566,7 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
 }
 .arbol__dibujo { width: 19mm; height: 20.6mm; }
-.arbol p { font-weight: 700; font-size: 11.5pt; line-height: 1.25; color: var(--tinta); }
+.arbol p { font-weight: 600; font-size: 11.5pt; line-height: 1.25; color: var(--tinta); }
 .arbol strong { font-weight: 900; color: var(--turquesa); }
 
 .ramo--pedido { right: 0; bottom: calc(var(--sangrado) + 37mm); width: 12mm; height: 19mm; }
@@ -591,7 +593,7 @@ a { color: inherit; text-decoration: none; }
 .datos__valor {
   display: block;
   margin-top: 0.3mm;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 12pt;
   line-height: 1.2;
 }
@@ -615,7 +617,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--tinta);
 }
 .qr__codigo svg { display: block; width: 100%; height: 100%; }
-.qr__texto { font-weight: 600; font-size: 11pt; line-height: 1.3; }
+.qr__texto { font-weight: 500; font-size: 11pt; line-height: 1.3; }
 .qr__texto strong { display: block; margin-bottom: 1mm; font-weight: 900; font-size: 12.5pt; color: var(--verde); }
 
 .contra__pie {
@@ -626,6 +628,71 @@ a { color: inherit; text-decoration: none; }
 .contra__logo { width: 13mm; height: 13mm; flex: none; }
 .contra__sigla { display: block; font-weight: 900; font-size: 15pt; line-height: 1; color: var(--azul); }
 .contra__nombre { display: block; margin-top: 0.6mm; font-weight: 700; font-size: 9pt; color: var(--azul); }
+
+/* ---------- Relieve suave (efecto 3D) ---------- */
+/* Luz desde arriba a la izquierda: brillo arriba, sombra interna abajo y sombra difusa debajo */
+.insignia, .cifras__numero {
+  background: radial-gradient(circle at 32% 26%,
+    color-mix(in srgb, var(--c, var(--verde-vivo)) 62%, white) 0%,
+    var(--c, var(--verde-vivo)) 52%,
+    color-mix(in srgb, var(--c, var(--verde-vivo)) 78%, black) 100%);
+  box-shadow:
+    inset 0 0.45mm 0.5mm rgb(255 255 255 / 0.4),
+    inset 0 -0.7mm 1.2mm rgb(0 0 0 / 0.14),
+    0 0.7mm 1.4mm color-mix(in srgb, var(--c, var(--verde-vivo)) 40%, transparent),
+    0 1.8mm 3.6mm rgb(23 54 93 / 0.12);
+}
+.sello {
+  --c: var(--rosa);
+  background: radial-gradient(circle at 32% 26%, color-mix(in srgb, var(--c) 62%, white) 0%, var(--c) 52%, color-mix(in srgb, var(--c) 80%, black) 100%);
+  box-shadow:
+    inset 0 0.5mm 0.6mm rgb(255 255 255 / 0.4),
+    inset 0 -0.8mm 1.4mm rgb(0 0 0 / 0.14),
+    0 0 0 1.2mm var(--papel),
+    0 1.6mm 3.2mm rgb(23 54 93 / 0.18);
+}
+.pildora--solida, .abrir {
+  background: linear-gradient(180deg, #33a866 0%, var(--verde) 58%, #1c7140 100%);
+  box-shadow:
+    inset 0 0.5mm 0.4mm rgb(255 255 255 / 0.28),
+    inset 0 -1mm 1.8mm rgb(0 0 0 / 0.14),
+    0 0.8mm 1.6mm rgb(35 135 77 / 0.28),
+    0 2.6mm 6mm rgb(23 54 93 / 0.12);
+}
+.pildora--suave {
+  background: linear-gradient(180deg, #f4fbf6 0%, var(--menta) 100%);
+  box-shadow: inset 0 0.4mm 0 #fff, 0 0.6mm 1.2mm rgb(23 54 93 / 0.08), 0 2.4mm 5mm rgb(23 54 93 / 0.08);
+}
+.tarjeta, .qr {
+  box-shadow: inset 0 0.4mm 0 rgb(255 255 255 / 0.9), 0 0.6mm 1.2mm rgb(23 54 93 / 0.06), 0 3mm 7mm rgb(23 54 93 / 0.09);
+}
+.tarjeta--azul { background: linear-gradient(180deg, #f4f9fe 0%, var(--azul-claro) 100%); }
+.tarjeta--menta { background: linear-gradient(180deg, #f3fbf6 0%, var(--menta) 100%); }
+.tarjeta--turquesa { background: linear-gradient(180deg, #f2fbf9 0%, var(--turquesa-claro) 100%); }
+.qr { background: linear-gradient(180deg, #fff7f9 0%, var(--rosa-claro) 100%); }
+.qr__codigo { box-shadow: 0 0.5mm 1.2mm rgb(23 54 93 / 0.10), 0 1.6mm 3.5mm rgb(23 54 93 / 0.06); }
+.especialidades li > div {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--c-claro) 40%, white) 0%, var(--c-claro) 100%);
+  box-shadow: inset 0 0.35mm 0 rgb(255 255 255 / 0.8), 0 0.5mm 1.1mm rgb(23 54 93 / 0.07), 0 1.6mm 3.5mm rgb(23 54 93 / 0.05);
+}
+.encabezado__texto { box-shadow: 0 0.4mm 1mm rgb(23 54 93 / 0.08); }
+/* El logo de la portada como un disco con brillo y sombra */
+.portada__brillo {
+  position: absolute;
+  left: 50%;
+  top: 0.96mm;
+  width: 46.08mm;
+  height: 46.08mm;
+  margin-left: -23.04mm;
+  border-radius: 50%;
+  background: radial-gradient(circle at 34% 24%, rgb(255 255 255 / 0.45) 0%, rgb(255 255 255 / 0.14) 28%, rgb(255 255 255 / 0) 50%);
+  box-shadow:
+    inset 0 -2.2mm 4mm rgb(0 0 0 / 0.16),
+    inset 0 1mm 2mm rgb(255 255 255 / 0.25),
+    0 0.8mm 1.5mm rgb(23 54 93 / 0.12),
+    0 3mm 6mm rgb(23 54 93 / 0.16);
+}
+.portada__salud { text-shadow: 0 0.5mm 0.9mm rgb(35 135 77 / 0.22); }
 
 /* ---------- Pantallas chicas ---------- */
 @media (max-width: 440px) {
