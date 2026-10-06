@@ -1,42 +1,38 @@
 /* Folleto IPD · Mes de la Salud Mental
    Tríptico A4 apaisado (297 × 210 mm) con pliegue de rodillo y 3 mm de sangrado.
-   Concepto: portada verde intenso con el lazo de la salud mental que brota;
-   interior claro, un solo foco por panel y nada importante sobre los pliegues. */
+   Estilo del folleto de referencia del IPD: fondo blanco con manchas pastel, hojas,
+   títulos en píldoras, íconos en círculos de color y olas al pie.
+   El verde es el color principal; rosa, turquesa y azul vienen del logo. */
 
-/* Fuentes estáticas para que el PDF las incruste como TrueType.
-   Fraunces con "SOFT" 100: opsz 60 para títulos grandes y opsz 24 ("Fraunces Chica") para títulos chicos. */
-@font-face { font-family: "Fraunces"; src: url("fuentes/fraunces-600.woff2") format("woff2"); font-weight: 600; font-display: block; }
-@font-face { font-family: "Fraunces"; src: url("fuentes/fraunces-700.woff2") format("woff2"); font-weight: 700; font-display: block; }
-@font-face { font-family: "Fraunces Chica"; src: url("fuentes/fraunces-chica-600.woff2") format("woff2"); font-weight: 600; font-display: block; }
-@font-face { font-family: "Lexend"; src: url("fuentes/lexend-300.woff2") format("woff2"); font-weight: 300; font-display: block; }
-@font-face { font-family: "Lexend"; src: url("fuentes/lexend-400.woff2") format("woff2"); font-weight: 400; font-display: block; }
-@font-face { font-family: "Lexend"; src: url("fuentes/lexend-500.woff2") format("woff2"); font-weight: 500; font-display: block; }
-@font-face { font-family: "Lexend"; src: url("fuentes/lexend-600.woff2") format("woff2"); font-weight: 600; font-display: block; }
-@font-face { font-family: "Lexend"; src: url("fuentes/lexend-700.woff2") format("woff2"); font-weight: 700; font-display: block; }
+/* Fuentes estáticas para que el PDF las incruste como TrueType */
+@font-face { font-family: "Nunito"; src: url("fuentes/nunito-400.woff2") format("woff2"); font-weight: 400; font-display: block; }
+@font-face { font-family: "Nunito"; src: url("fuentes/nunito-600.woff2") format("woff2"); font-weight: 600; font-display: block; }
+@font-face { font-family: "Nunito"; src: url("fuentes/nunito-700.woff2") format("woff2"); font-weight: 700; font-display: block; }
+@font-face { font-family: "Nunito"; src: url("fuentes/nunito-800.woff2") format("woff2"); font-weight: 800; font-display: block; }
+@font-face { font-family: "Nunito"; src: url("fuentes/nunito-900.woff2") format("woff2"); font-weight: 900; font-display: block; }
+@font-face { font-family: "Caveat"; src: url("fuentes/caveat-700.woff2") format("woff2"); font-weight: 700; font-display: block; }
 
 :root {
   /* Verde: color del mes de la salud mental */
-  --verde-portada: #175f3b;
-  --verde-profundo: #0f3a28;
-  --verde: #1f7a4a;
-  --verde-hoja: #4fae6d;
-  --verde-brote: #c4e79a;
-  --menta: #e5f2e7;
-  --linea: #c9e0cd;
-  /* Neutros con un leve tinte verde */
-  --papel: #fbfcf8;
-  --tinta: #1b2a22;
-  --tinta-suave: #3d5146;
-  --mesa: #dde5df;
-  /* Colores del logo (solo en el logo) */
-  --rosa: #f2a5ac;
-  --turquesa: #26ad9f;
-  --salvia: #81998b;
+  --verde: #23874d;
+  --verde-vivo: #2e9e5b;
+  --menta: #e3f5e9;
+  /* Acentos del logo */
+  --rosa: #e8708f;
+  --rosa-claro: #fdebf0;
+  --turquesa: #1f9c8f;
+  --turquesa-claro: #e0f4f1;
   --azul: #2c7fcf;
+  --azul-claro: #e7f1fb;
+  /* Texto azul marino, como en el folleto de referencia */
+  --tinta: #17365d;
+  --tinta-suave: #3c5675;
+  --linea: #d3e3ec;
+  --papel: #ffffff;
+  --mesa: #dfe7ea;
 
-  --f-titulo: "Fraunces", Georgia, "Times New Roman", serif;
-  --f-titulo-chico: "Fraunces Chica", "Fraunces", Georgia, "Times New Roman", serif;
-  --f-texto: "Lexend", "Segoe UI", Arial, sans-serif;
+  --f-texto: "Nunito", "Segoe UI", Arial, sans-serif;
+  --f-mano: "Caveat", "Segoe Script", "Comic Sans MS", cursive;
 
   --sangrado: 3mm;
   color-scheme: light;
@@ -48,7 +44,7 @@ body {
   background: var(--mesa);
   color: var(--tinta);
   font-family: var(--f-texto);
-  font-weight: 300;
+  font-weight: 400;
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
@@ -57,20 +53,6 @@ ul { padding: 0; list-style: none; }
 a { color: inherit; text-decoration: none; }
 [hidden] { display: none !important; }
 
-.titulo {
-  font-family: var(--f-titulo);
-  font-weight: 600;
-  text-wrap: balance;
-  color: var(--verde-profundo);
-}
-.etiqueta {
-  font-family: var(--f-texto);
-  font-weight: 600;
-  font-size: 8.5pt;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--verde);
-}
 .icono {
   width: 1em;
   height: 1em;
@@ -81,6 +63,71 @@ a { color: inherit; text-decoration: none; }
   stroke-linejoin: round;
   flex: none;
 }
+
+/* Tonos: color pleno (--c) y fondo suave (--c-claro) */
+.tono-verde { --c: var(--verde-vivo); --c-claro: var(--menta); }
+.tono-rosa { --c: var(--rosa); --c-claro: var(--rosa-claro); }
+.tono-turquesa { --c: var(--turquesa); --c-claro: var(--turquesa-claro); }
+.tono-azul { --c: var(--azul); --c-claro: var(--azul-claro); }
+
+.etiqueta {
+  font-weight: 800;
+  font-size: 8.5pt;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--verde);
+}
+
+/* Títulos en píldora */
+.pildora {
+  display: block;
+  font-weight: 800;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+.pildora--solida {
+  padding: 3.2mm 5mm 3.6mm;
+  border-radius: 6mm;
+  background: var(--verde);
+  color: #fff;
+}
+.pildora--suave {
+  position: relative;
+  margin-inline: 7mm;
+  padding: 2.6mm 5mm 3mm;
+  border-radius: 999px;
+  background: var(--menta);
+  color: var(--tinta);
+  text-align: center;
+}
+.chispa {
+  position: absolute;
+  top: 50%;
+  width: 8mm;
+  height: 8mm;
+  margin-top: -4mm;
+}
+.chispa--der { right: -9mm; }
+.chispa--izq { left: -9mm; transform: scaleX(-1); }
+
+/* Insignia: círculo de color con ícono blanco */
+.insignia {
+  width: 12mm;
+  height: 12mm;
+  border-radius: 50%;
+  background: var(--c, var(--verde-vivo));
+  color: #fff;
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+.insignia .icono { font-size: 18pt; stroke-width: 2; }
+
+/* Tarjetas con fondo suave */
+.tarjeta { border-radius: 5mm; padding: 4.5mm 5mm; }
+.tarjeta--azul { background: var(--azul-claro); }
+.tarjeta--menta { background: var(--menta); }
+.tarjeta--turquesa { background: var(--turquesa-claro); }
 
 /* ---------- Barra de vista (solo pantalla) ---------- */
 .barra {
@@ -96,7 +143,7 @@ a { color: inherit; text-decoration: none; }
   background: var(--papel);
   border-bottom: 1px solid var(--linea);
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 600;
 }
 .barra__grupo { display: flex; gap: 4px; padding: 3px; border-radius: 999px; background: var(--menta); }
 .barra button {
@@ -105,12 +152,12 @@ a { color: inherit; text-decoration: none; }
   border-radius: 999px;
   padding: 6px 14px;
   background: transparent;
-  color: var(--verde-profundo);
+  color: var(--tinta);
   cursor: pointer;
 }
 .barra button[aria-pressed="true"] { background: var(--verde); color: #fff; }
-.barra button:focus-visible, .barra input:focus-visible { outline: 2px solid var(--verde-profundo); outline-offset: 2px; }
-.barra label { display: flex; align-items: center; gap: 6px; color: var(--verde-profundo); cursor: pointer; }
+.barra button:focus-visible, .barra input:focus-visible { outline: 2px solid var(--tinta); outline-offset: 2px; }
+.barra label { display: flex; align-items: center; gap: 6px; color: var(--tinta); cursor: pointer; }
 .barra input { accent-color: var(--verde); width: 16px; height: 16px; }
 
 /* ---------- Escritorio ---------- */
@@ -134,18 +181,19 @@ a { color: inherit; text-decoration: none; }
   grid-template-rows: 100%;
   overflow: hidden;
   background: var(--papel);
-  box-shadow: 0 2px 4px rgb(15 58 40 / 0.12), 0 12px 40px rgb(15 58 40 / 0.16);
+  box-shadow: 0 2px 4px rgb(23 54 93 / 0.10), 0 12px 40px rgb(23 54 93 / 0.14);
 }
 /* La solapa que se dobla hacia adentro mide 97 mm */
 .hoja--exterior { grid-template-columns: calc(97mm + var(--sangrado)) 100mm calc(100mm + var(--sangrado)); }
 .hoja--interior { grid-template-columns: calc(100mm + var(--sangrado)) 100mm calc(97mm + var(--sangrado)); }
 
 .panel {
-  /* Margen junto al pliegue duplicado: 8 mm de cada lado = 16 mm entre contenidos */
+  /* Margen junto al pliegue duplicado: 8 mm de cada lado = 16 mm entre contenidos.
+     Abajo queda lugar para las olas. */
   --m-borde: 9mm;
   --m-pliegue: 8mm;
   --m-sup: 11mm;
-  --m-inf: 10mm;
+  --m-inf: 15mm;
   --pad-izq: var(--m-pliegue);
   --pad-der: var(--m-pliegue);
   --pad-sup: calc(var(--sangrado) + var(--m-sup));
@@ -158,13 +206,27 @@ a { color: inherit; text-decoration: none; }
   padding: var(--pad-sup) var(--pad-der) var(--pad-inf) var(--pad-izq);
   background: var(--papel);
   font-size: 11.5pt;
-  line-height: 1.38;
+  line-height: 1.35;
 }
 .panel > * { position: relative; z-index: 1; }
 .panel--borde-izq { --pad-izq: calc(var(--sangrado) + var(--m-borde)); }
 .panel--borde-der { --pad-der: calc(var(--sangrado) + var(--m-borde)); }
 
-/* Guías de corte, pliegue y zona segura (solo para revisar) */
+/* Decoración: nunca desborda por abajo (Chrome manda a otra página un SVG que no entra) */
+.deco { position: absolute; z-index: 0; pointer-events: none; }
+.mancha { top: 0; width: 46mm; height: 38mm; }
+.mancha--izq { left: 0; }
+.mancha--der { right: 0; }
+.ola {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: calc(var(--sangrado) + 15mm);
+}
+.ola--invertida { transform: scaleX(-1); }
+.ola--alta { height: calc(var(--sangrado) + 24mm); }
+
+/* Guías de corte, pliegue y área de contenido (solo para revisar) */
 .con-guias .hoja::before {
   content: "";
   position: absolute;
@@ -212,309 +274,304 @@ a { color: inherit; text-decoration: none; }
   width: 100mm;
   height: 210mm;
   flex: none;
-  box-shadow: 0 2px 4px rgb(15 58 40 / 0.12), 0 12px 40px rgb(15 58 40 / 0.16);
+  box-shadow: 0 2px 4px rgb(23 54 93 / 0.10), 0 12px 40px rgb(23 54 93 / 0.14);
 }
 
 /* ================= PORTADA ================= */
 .panel--portada {
-  background: var(--verde-portada);
-  color: #fff;
-}
-.marca { display: flex; align-items: center; gap: 3.5mm; }
-.marca__logo {
-  width: 20mm;
-  height: 20mm;
-  padding: 1.4mm;
-  border-radius: 50%;
-  background: #fff;
-  flex: none;
-}
-.marca__logo svg { display: block; width: 100%; height: 100%; }
-.marca__sigla {
-  display: block;
-  font-weight: 700;
-  font-size: 21pt;
-  line-height: 1;
-  letter-spacing: 0.03em;
-}
-.marca__nombre {
-  display: block;
-  margin-top: 1.2mm;
-  font-weight: 400;
-  font-size: 9pt;
-  line-height: 1.25;
-}
-.panel--portada .marca__nombre { color: var(--menta); }
-
-.portada__aviso {
-  display: flex;
   align-items: center;
-  gap: 2mm;
-  margin-top: 14mm;
-  color: var(--verde-brote);
+  text-align: center;
 }
-.portada__aviso .icono { font-size: 15pt; stroke-width: 2; }
-.portada__aviso .etiqueta { color: inherit; font-size: 9pt; }
-
+.panel--portada .mancha { width: 50mm; height: 42mm; }
 .portada__titulo {
-  margin-top: 3mm;
-  font-size: 41pt;
-  line-height: 0.98;
+  margin-top: 7mm;
+  font-weight: 700;
+  font-size: 37pt;
+  line-height: 1.02;
   letter-spacing: -0.01em;
-  color: #fff;
+  text-wrap: balance;
+  color: var(--tinta);
 }
-.portada__bajada {
-  margin-top: 5mm;
-  max-width: 64mm;
-  font-size: 12.5pt;
-  line-height: 1.35;
-  color: #e4f2e7;
+.portada__marca {
+  position: relative;
+  margin-top: 12mm;
+  width: 100%;
+  height: 48mm;
 }
-.portada__ilustracion {
+.portada__logo {
   position: absolute;
-  z-index: 0;
-  /* Sin desbordar por abajo: Chrome manda a la página siguiente un SVG que no entra */
-  right: calc(var(--sangrado) - 12mm);
-  bottom: 0;
-  width: 88mm;
+  left: 50%;
+  top: 0;
+  width: 48mm;
+  height: 48mm;
+  margin-left: -24mm;
 }
-.portada__ilustracion svg { display: block; width: 100%; height: auto; }
-
+.portada__lazo {
+  position: absolute;
+  left: 0;
+  bottom: -2mm;
+  width: 17mm;
+  height: 21mm;
+}
 .sello {
   position: absolute;
-  left: var(--pad-izq);
-  bottom: var(--pad-inf);
-  width: 31mm;
-  height: 31mm;
+  right: 0;
+  bottom: -2mm;
+  width: 21mm;
+  height: 21mm;
   border-radius: 50%;
-  background: var(--verde-brote);
-  color: var(--verde-profundo);
+  background: var(--rosa);
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  box-shadow: 0 0 0 1.2mm var(--papel);
 }
-.sello__numero {
-  font-family: var(--f-titulo);
-  font-weight: 700;
+.sello__numero { font-weight: 900; font-size: 19pt; line-height: 0.9; }
+.sello__texto { margin-top: 0.6mm; font-weight: 800; font-size: 7.5pt; line-height: 1.1; }
+.portada__sigla {
+  margin-top: 4mm;
+  font-weight: 900;
   font-size: 30pt;
-  line-height: 0.9;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--azul);
 }
-.sello__texto {
-  margin-top: 1mm;
-  font-weight: 500;
-  font-size: 8.5pt;
-  line-height: 1.15;
+.portada__nombre {
+  margin-top: 1.5mm;
+  font-weight: 800;
+  font-size: 11pt;
+  color: var(--azul);
 }
+.portada__salud {
+  margin-top: 9mm;
+  font-weight: 900;
+  font-size: 28pt;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--verde);
+}
+.portada__bajada {
+  margin-top: 2.5mm;
+  max-width: 76mm;
+  font-family: var(--f-mano);
+  font-weight: 700;
+  font-size: 19pt;
+  line-height: 1.05;
+  color: var(--turquesa);
+  text-wrap: balance;
+}
+.ramo--portada { left: 0; bottom: calc(var(--sangrado) + 6mm); width: 26mm; height: 26mm; z-index: 1; }
 
 /* ================= SOLAPA ================= */
-.panel--solapa { background: var(--menta); }
-.solapa__titulo { font-size: 30pt; line-height: 1; }
-.solapa__entrada { margin-top: 5mm; font-weight: 400; font-size: 12pt; }
+.solapa__titulo { font-size: 23pt; }
+.solapa__entrada { margin-top: 4mm; font-weight: 600; font-size: 12pt; }
 .senales {
-  margin-top: 6mm;
+  margin-top: 4mm;
   display: flex;
   flex-direction: column;
+  gap: 4mm;
+  padding: 5.5mm 4.5mm;
 }
 .senales li {
   display: grid;
   grid-template-columns: 6mm 1fr;
-  gap: 3mm;
+  gap: 2.8mm;
   align-items: start;
-  padding: 3.9mm 0;
-  border-top: 0.3mm solid var(--linea);
-  font-weight: 400;
-  font-size: 12.5pt;
-  line-height: 1.28;
+  font-weight: 600;
+  font-size: 11.5pt;
+  line-height: 1.25;
 }
-.senales li:last-child { border-bottom: 0.3mm solid var(--linea); }
 .senales li::before {
   content: "";
-  width: 4.6mm;
-  height: 4.6mm;
-  margin-top: 0.5mm;
-  border: 0.55mm solid var(--verde);
+  width: 5.6mm;
+  height: 5.6mm;
   border-radius: 50%;
-  background: var(--papel);
+  background: var(--rosa) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5l10 -10'/%3E%3C/svg%3E") center / 64% no-repeat;
 }
 .solapa__cierre {
   margin-top: auto;
   display: flex;
   flex-direction: column;
-  gap: 5mm;
+  gap: 3.5mm;
 }
-.solapa__frase { font-family: var(--f-titulo-chico); font-size: 18pt; line-height: 1.1; color: var(--verde); }
+.pincelada {
+  position: relative;
+  padding: 4mm 5mm 4.5mm;
+  text-align: center;
+}
+.pincelada__fondo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.pincelada p {
+  position: relative;
+  font-weight: 900;
+  font-size: 14pt;
+  line-height: 1.15;
+  text-wrap: balance;
+}
 .abrir {
   align-self: flex-end;
   display: inline-flex;
   align-items: center;
   gap: 2mm;
-  padding: 2.4mm 3mm 2.4mm 4.2mm;
+  padding: 2.3mm 3mm 2.3mm 4.2mm;
   border-radius: 999px;
   background: var(--verde);
   color: #fff;
-  font-weight: 500;
+  font-weight: 800;
   font-size: 10.5pt;
   line-height: 1;
 }
-.abrir .icono { font-size: 13pt; stroke-width: 2.2; }
+.abrir .icono { font-size: 13pt; stroke-width: 2.4; }
 
 /* ================= INTERIOR IZQUIERDO: la promesa ================= */
-.promesa__titulo { margin-top: 3mm; font-size: 23pt; line-height: 1.08; }
-.promesa__texto { margin-top: 5mm; font-size: 12pt; color: var(--tinta-suave); }
+.promesa__titulo { margin-top: 2.5mm; font-size: 17.5pt; }
+.promesa__texto { margin-top: 5mm; font-size: 12pt; }
 .cifras {
-  margin-top: 7mm;
+  margin-top: 6mm;
   display: flex;
   flex-direction: column;
+  gap: 3.5mm;
 }
 .cifras li {
   display: grid;
-  grid-template-columns: 21mm 1fr;
-  gap: 3mm;
-  align-items: center;
-  padding: 3.4mm 0;
-  border-top: 0.3mm solid var(--linea);
-}
-.cifras__numero {
-  font-family: var(--f-titulo);
-  font-weight: 600;
-  font-size: 36pt;
-  line-height: 1;
-  color: var(--verde);
-  font-variant-numeric: lining-nums tabular-nums;
-}
-.cifras__texto { font-weight: 400; font-size: 12pt; line-height: 1.25; }
-.ramita {
-  position: absolute;
-  z-index: 0;
-  pointer-events: none;
-}
-.panel--promesa .ramita {
-  width: 30mm;
-  right: calc(var(--pad-der) - 2mm);
-  bottom: 0;
-}
-
-/* ================= INTERIOR CENTRAL: especialidades ================= */
-.especialidades__titulo { margin-top: 3mm; font-size: 23pt; line-height: 1.08; }
-.especialidades {
-  margin-top: 7mm;
-  display: flex;
-  flex-direction: column;
-  gap: 6mm;
-}
-.especialidades li {
-  display: grid;
-  grid-template-columns: 14mm 1fr;
+  grid-template-columns: 15mm 1fr;
   gap: 4mm;
   align-items: center;
 }
-.especialidades__icono {
-  width: 14mm;
-  height: 14mm;
+.cifras__numero {
+  width: 15mm;
+  height: 15mm;
   border-radius: 50%;
-  background: var(--menta);
-  color: var(--verde);
+  background: var(--c);
+  color: #fff;
   display: grid;
   place-items: center;
+  font-weight: 900;
+  font-size: 17pt;
+  font-variant-numeric: lining-nums tabular-nums;
 }
-.especialidades__icono .icono { font-size: 23pt; stroke-width: 1.7; }
-.especialidades h3 {
-  font-family: var(--f-titulo-chico);
-  font-size: 15pt;
-  line-height: 1.1;
-}
-.especialidades p {
-  margin-top: 0.8mm;
-  font-size: 11pt;
-  line-height: 1.25;
-  color: var(--tinta-suave);
+.cifras__texto { font-weight: 700; font-size: 12pt; line-height: 1.2; }
+.familia {
+  right: calc(var(--pad-der) - 2mm);
+  bottom: calc(var(--sangrado) + 9mm);
+  width: 40mm;
+  height: 32mm;
 }
 
-/* ================= INTERIOR DERECHO: el pedido ================= */
-.panel--pedido { background: var(--menta); }
-.pedido__titulo { margin-top: 3mm; font-size: 26pt; line-height: 1.04; }
-.pedido__texto { margin-top: 5mm; font-weight: 400; font-size: 12pt; }
-.llamada {
+/* ================= INTERIOR CENTRAL: especialidades ================= */
+.especialidades__titulo { font-size: 17pt; }
+.especialidades {
   margin-top: 8mm;
+  display: flex;
+  flex-direction: column;
+  gap: 4.6mm;
+}
+/* Como los encabezados del folleto de referencia: círculo de color sobre una píldora suave */
+.especialidades li {
+  display: grid;
+  grid-template-columns: 14mm 1fr;
+  align-items: center;
+}
+.especialidades .insignia {
+  position: relative;
+  z-index: 1;
+  width: 14mm;
+  height: 14mm;
+}
+.especialidades .insignia .icono { font-size: 21pt; }
+.especialidades li > div {
+  margin-left: -5mm;
+  padding: 2.6mm 4mm 2.8mm 8mm;
+  border-radius: 0 5mm 5mm 0;
+  background: var(--c-claro);
+}
+.especialidades h3 { font-weight: 800; font-size: 13.5pt; line-height: 1.1; }
+.especialidades p { margin-top: 0.4mm; font-size: 10.5pt; line-height: 1.2; color: var(--tinta-suave); }
+
+/* ================= INTERIOR DERECHO: el pedido ================= */
+.pedido__titulo { margin-top: 2.5mm; font-size: 22pt; }
+.pedido__texto { margin-top: 4mm; font-weight: 600; font-size: 12pt; }
+.llamada {
+  margin-top: 7mm;
   display: grid;
   grid-template-columns: 12mm 1fr;
   gap: 3.5mm;
   align-items: center;
 }
-.llamada__icono {
-  width: 12mm;
-  height: 12mm;
-  border-radius: 50%;
-  background: var(--verde);
-  color: #fff;
-  display: grid;
-  place-items: center;
-}
-.llamada__icono .icono { font-size: 18pt; stroke-width: 2; }
 .llamada__numero {
   display: block;
-  font-family: var(--f-titulo);
-  font-weight: 600;
-  font-size: 27pt;
+  font-weight: 900;
+  font-size: 25pt;
   line-height: 1;
-  color: var(--verde-profundo);
-  font-variant-numeric: lining-nums;
+  color: var(--tinta);
   white-space: nowrap;
 }
-.llamada__direccion { display: block; margin-top: 1mm; font-size: 10.5pt; font-weight: 400; color: var(--tinta-suave); }
+.llamada__direccion { display: block; margin-top: 0.8mm; font-weight: 600; font-size: 10.5pt; color: var(--tinta-suave); }
 
-.convenios {
-  margin-top: 10mm;
-  padding: 5mm 5mm 3.5mm;
-  border-radius: 4mm;
-  background: var(--papel);
+.convenios { margin-top: 8mm; padding-top: 4mm; padding-bottom: 5mm; }
+.encabezado {
+  display: grid;
+  grid-template-columns: 11mm 1fr;
+  align-items: center;
 }
-.convenios ul { margin-top: 2mm; }
+.encabezado .insignia { position: relative; z-index: 1; width: 11mm; height: 11mm; }
+.encabezado .insignia .icono { font-size: 16pt; }
+.encabezado__texto {
+  margin-left: -4mm;
+  padding: 1.6mm 4mm 1.8mm 6.5mm;
+  border-radius: 0 999px 999px 0;
+  background: var(--papel);
+  font-weight: 800;
+  font-size: 12.5pt;
+  line-height: 1.1;
+}
+.convenios ul { margin-top: 3.5mm; display: flex; flex-direction: column; gap: 2.4mm; }
 .convenios li {
   display: flex;
   align-items: center;
   gap: 2.5mm;
-  padding: 2.4mm 0;
-  border-top: 0.3mm solid var(--linea);
-  font-weight: 500;
+  font-weight: 700;
   font-size: 11.5pt;
   line-height: 1.2;
-  color: var(--verde-profundo);
 }
-.convenios li:first-child { border-top: 0; }
 .convenios li::before {
   content: "";
-  width: 1.8mm;
-  height: 1.8mm;
+  width: 2.4mm;
+  height: 2.4mm;
   border-radius: 50%;
-  background: var(--verde-hoja);
+  background: var(--turquesa);
   flex: none;
 }
 
 .arbol {
   margin-top: auto;
   display: grid;
-  grid-template-columns: 11mm 1fr;
+  grid-template-columns: 19mm 1fr;
   gap: 3mm;
   align-items: center;
-  padding-top: 5mm;
-  border-top: 0.3mm dashed var(--verde-hoja);
-  font-weight: 400;
-  font-size: 11pt;
-  line-height: 1.3;
 }
-.arbol .icono { font-size: 31pt; color: var(--verde); stroke-width: 1.5; }
+.arbol__dibujo { width: 19mm; height: 20.6mm; }
+.arbol p { font-weight: 700; font-size: 11.5pt; line-height: 1.25; color: var(--tinta); }
+.arbol strong { font-weight: 900; color: var(--turquesa); }
+
+.ramo--pedido { right: 0; bottom: calc(var(--sangrado) + 37mm); width: 12mm; height: 19mm; }
 
 /* ================= CONTRAPORTADA ================= */
 .panel--contra { justify-content: space-between; }
-.contra__titulo { font-size: 30pt; line-height: 1.04; }
+.contra__titulo { font-size: 20pt; }
 .datos {
-  margin-top: 8mm;
+  margin-top: 7mm;
   display: flex;
   flex-direction: column;
-  gap: 6mm;
+  gap: 5.5mm;
+  padding-block: 6mm;
 }
 .datos li {
   display: grid;
@@ -522,62 +579,49 @@ a { color: inherit; text-decoration: none; }
   gap: 3.5mm;
   align-items: center;
 }
-.datos__icono {
-  width: 11mm;
-  height: 11mm;
-  border-radius: 50%;
-  background: var(--menta);
-  color: var(--verde);
-  display: grid;
-  place-items: center;
-}
-.datos__icono .icono { font-size: 16.5pt; stroke-width: 1.9; }
-.datos .etiqueta { display: block; font-size: 8pt; }
+.datos .insignia { width: 11mm; height: 11mm; }
+.datos .insignia .icono { font-size: 16pt; }
+.datos .etiqueta { display: block; font-size: 7.5pt; }
 .datos__valor {
   display: block;
-  margin-top: 0.5mm;
-  font-weight: 500;
-  font-size: 13pt;
-  line-height: 1.25;
-  color: var(--tinta);
+  margin-top: 0.3mm;
+  font-weight: 700;
+  font-size: 12pt;
+  line-height: 1.2;
 }
-.datos__valor--grande {
-  font-family: var(--f-titulo);
-  font-weight: 600;
-  font-size: 23pt;
-  line-height: 1.05;
-  color: var(--verde-profundo);
-}
+.datos__valor--grande { font-weight: 900; font-size: 20pt; line-height: 1.05; }
 
 .qr {
   display: grid;
-  grid-template-columns: 36mm 1fr;
+  grid-template-columns: 34mm 1fr;
   gap: 4mm;
   align-items: center;
   padding: 4mm;
-  border-radius: 4mm;
-  background: var(--menta);
+  border-radius: 5mm;
+  background: var(--rosa-claro);
 }
 .qr__codigo {
-  width: 36mm;
-  height: 36mm;
-  padding: 3.8mm;
-  border-radius: 2mm;
+  width: 34mm;
+  height: 34mm;
+  padding: 3.4mm;
+  border-radius: 3mm;
   background: #fff;
-  color: var(--verde-profundo);
+  color: var(--tinta);
 }
 .qr__codigo svg { display: block; width: 100%; height: 100%; }
-.qr__texto { font-weight: 400; font-size: 11pt; line-height: 1.3; }
-.qr__texto strong { display: block; margin-bottom: 1mm; font-weight: 600; font-size: 12pt; color: var(--verde-profundo); }
+.qr__texto { font-weight: 600; font-size: 11pt; line-height: 1.3; }
+.qr__texto strong { display: block; margin-bottom: 1mm; font-weight: 900; font-size: 12.5pt; color: var(--verde); }
 
 .contra__pie {
-  padding-top: 5mm;
-  border-top: 0.3mm solid var(--linea);
+  display: flex;
+  align-items: center;
+  gap: 3mm;
 }
-.contra__pie .marca__logo { width: 13mm; height: 13mm; padding: 0; background: none; }
-.contra__pie .marca__sigla { font-size: 14pt; color: var(--azul); }
-.contra__pie .marca__nombre { margin-top: 0.6mm; font-size: 8.5pt; color: var(--tinta-suave); }
+.contra__logo { width: 13mm; height: 13mm; flex: none; }
+.contra__sigla { display: block; font-weight: 900; font-size: 15pt; line-height: 1; color: var(--azul); }
+.contra__nombre { display: block; margin-top: 0.6mm; font-weight: 700; font-size: 9pt; color: var(--azul); }
 
+/* ---------- Pantallas chicas ---------- */
 @media (max-width: 440px) {
   .lectura { zoom: 0.9; }
 }

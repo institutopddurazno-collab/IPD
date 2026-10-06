@@ -8,11 +8,16 @@
 </head>
 <body>
 
-<!-- Íconos: Tabler Icons (MIT). Logo y lazo: dibujados para este folleto. -->
+<!-- Íconos: Tabler Icons (MIT). Logo, lazo, hojas, olas e ilustraciones: dibujados para este folleto. -->
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
   <defs>
     <clipPath id="logo-circulo"><circle cx="50" cy="50" r="48"/></clipPath>
     <path id="hoja-forma" d="M0 0C5 -7 17 -8 26 0C17 8 5 7 0 0Z"/>
+    <linearGradient id="grad-rosa" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6bfcd"/><stop offset="1" stop-color="#fdeef2"/></linearGradient>
+    <linearGradient id="grad-rosa-2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f2a9bb"/><stop offset="1" stop-color="#f9d3dd"/></linearGradient>
+    <linearGradient id="grad-celeste" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bfe5ef"/><stop offset="1" stop-color="#ecf7fa"/></linearGradient>
+    <linearGradient id="grad-celeste-2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fd7e6"/><stop offset="1" stop-color="#cfeef5"/></linearGradient>
+    <linearGradient id="grad-menta" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c2eacf"/><stop offset="1" stop-color="#eef9f2"/></linearGradient>
   </defs>
 
   <symbol id="logo-ipd" viewBox="0 0 100 100">
@@ -34,32 +39,94 @@
     </g>
   </symbol>
 
-  <!-- Lazo verde de la salud mental que brota -->
-  <symbol id="lazo-brote" viewBox="0 0 240 280">
-    <circle cx="128" cy="168" r="104" fill="#1d6c45"/>
-    <circle cx="128" cy="168" r="74" fill="#22784c"/>
+  <!-- Lazo verde de la salud mental, con un brote -->
+  <symbol id="lazo" viewBox="0 0 120 150">
     <g fill="none" stroke-linecap="butt">
-      <path d="M64 290C84 246 102 212 114 180C130 144 152 128 150 100C148 76 132 62 114 62C96 62 80 76 78 100C76 128 98 144 114 180C126 212 144 246 164 290" stroke="#8fcd6c" stroke-width="27"/>
-      <path d="M89.3 137C96.5 149 106 162 114 180C126 212 144 246 164 290" stroke="#14502f" stroke-width="35"/>
-      <path d="M114 62C96 62 80 76 78 100C76 128 98 144 114 180C126 212 144 246 164 290" stroke="#b9e591" stroke-width="27"/>
+      <path d="M30 142C40 124 50 110 60 95C70 78 84 66 82 50C80 36 72 30 60 30C48 30 40 36 38 50C36 66 50 78 60 95C70 110 80 124 90 142" stroke="#2e9e5b" stroke-width="15"/>
+      <path d="M44.5 72.1C49 79.3 55 86.5 60 95C70 110 80 124 90 142" stroke="#1b6a3d" stroke-width="19"/>
+      <path d="M60 30C48 30 40 36 38 50C36 66 50 78 60 95C70 110 80 124 90 142" stroke="#5cbf7d" stroke-width="15"/>
     </g>
-    <path d="M114 50V36" fill="none" stroke="#e5f2e7" stroke-width="4" stroke-linecap="round"/>
-    <use href="#hoja-forma" transform="translate(114 42) rotate(-150) scale(1.25)" fill="#e5f2e7"/>
-    <use href="#hoja-forma" transform="translate(114 37) rotate(-35) scale(1.45)" fill="#e5f2e7"/>
-    <use href="#hoja-forma" transform="translate(200 70) rotate(-120) scale(.8)" fill="#c4e79a"/>
-    <use href="#hoja-forma" transform="translate(30 150) rotate(-60) scale(.7)" fill="#4fae6d"/>
+    <path d="M60 23V9" fill="none" stroke="#2e9e5b" stroke-width="2.6" stroke-linecap="round"/>
+    <use href="#hoja-forma" transform="translate(60 15) rotate(-150) scale(.75)" fill="#22a497"/>
+    <use href="#hoja-forma" transform="translate(60 10) rotate(-35) scale(.85)" fill="#5cbf7d"/>
   </symbol>
 
-  <symbol id="ramita" viewBox="0 0 70 140">
-    <path d="M36 140C34 104 30 70 40 8" fill="none" stroke="#4fae6d" stroke-width="2.6" stroke-linecap="round"/>
-    <g fill="#4fae6d">
-      <use href="#hoja-forma" transform="translate(35 112) rotate(-160) scale(1.05)"/>
-      <use href="#hoja-forma" transform="translate(34 92) rotate(-25) scale(1.1)"/>
-      <use href="#hoja-forma" transform="translate(34 70) rotate(-155) scale(.95)"/>
-      <use href="#hoja-forma" transform="translate(36 50) rotate(-30) scale(.95)"/>
-      <use href="#hoja-forma" transform="translate(37 30) rotate(-150) scale(.75)"/>
+  <!-- Manchas pastel de las esquinas -->
+  <symbol id="mancha-rosa" viewBox="0 0 120 100">
+    <path d="M0 0H108C116 18 102 36 80 44C58 52 46 64 34 80C24 94 10 100 0 98Z" fill="url(#grad-rosa)"/>
+    <path d="M0 0H62C68 12 58 24 44 28C30 32 22 42 14 54C9 61 4 64 0 64Z" fill="url(#grad-rosa-2)"/>
+  </symbol>
+  <symbol id="mancha-celeste" viewBox="0 0 120 100">
+    <path d="M120 0H12C4 18 18 36 40 44C62 52 74 64 86 80C96 94 110 100 120 98Z" fill="url(#grad-celeste)"/>
+    <path d="M120 0H58C52 12 62 24 76 28C90 32 98 42 106 54C111 61 116 64 120 64Z" fill="url(#grad-celeste-2)"/>
+  </symbol>
+  <symbol id="mancha-menta" viewBox="0 0 120 100">
+    <path d="M120 0H12C4 18 18 36 40 44C62 52 74 64 86 80C96 94 110 100 120 98Z" fill="url(#grad-menta)"/>
+  </symbol>
+
+  <!-- Olas del pie de cada panel -->
+  <symbol id="olas" viewBox="0 0 400 60" preserveAspectRatio="none">
+    <path d="M0 26C70 6 130 8 210 20C290 32 345 28 400 10V60H0Z" fill="#cdeedb"/>
+    <path d="M0 38C80 20 150 24 225 36C295 47 350 42 400 28V60H0Z" fill="#7fcf98"/>
+    <path d="M0 50C90 38 170 42 250 50C320 57 370 54 400 44V60H0Z" fill="#23874d"/>
+  </symbol>
+
+  <!-- Ramos de hojas -->
+  <symbol id="ramo-abanico" viewBox="0 0 80 80">
+    <use href="#hoja-forma" transform="translate(8 76) rotate(-82) scale(2.3)" fill="#22a497"/>
+    <use href="#hoja-forma" transform="translate(10 76) rotate(-56) scale(2)" fill="#93d9d0"/>
+    <use href="#hoja-forma" transform="translate(12 77) rotate(-30) scale(1.7)" fill="#f2a9bb"/>
+    <use href="#hoja-forma" transform="translate(13 78) rotate(-8) scale(1.3)" fill="#5cbf7d"/>
+  </symbol>
+  <symbol id="ramo-tallo" viewBox="0 0 70 110">
+    <path d="M14 108C22 80 32 52 54 10" fill="none" stroke="#22a497" stroke-width="2.4" stroke-linecap="round"/>
+    <use href="#hoja-forma" transform="translate(19 90) rotate(-160) scale(1.05)" fill="#22a497"/>
+    <use href="#hoja-forma" transform="translate(23 76) rotate(-25) scale(1.1)" fill="#f2a9bb"/>
+    <use href="#hoja-forma" transform="translate(30 60) rotate(-150) scale(.95)" fill="#5cbf7d"/>
+    <use href="#hoja-forma" transform="translate(37 44) rotate(-35) scale(.95)" fill="#93d9d0"/>
+    <use href="#hoja-forma" transform="translate(45 28) rotate(-140) scale(.8)" fill="#22a497"/>
+    <use href="#hoja-forma" transform="translate(54 10) rotate(-70) scale(.75)" fill="#f2a9bb"/>
+  </symbol>
+
+  <!-- Salpicaduras al costado de los títulos -->
+  <symbol id="chispas" viewBox="0 0 30 30">
+    <g fill="none" stroke="#22a497" stroke-width="3.2" stroke-linecap="round">
+      <path d="M5 10L13 4"/><path d="M7 15.5H19"/><path d="M5 21L13 27"/>
     </g>
-    <use href="#hoja-forma" transform="translate(40 9) rotate(-80) scale(.7)" fill="#c4e79a"/>
+  </symbol>
+
+  <!-- Pincelada rosa -->
+  <symbol id="pincelada" viewBox="0 0 300 90" preserveAspectRatio="none">
+    <path d="M10 20C46 6 120 12 196 8C238 6 276 8 292 16C299 30 297 54 290 70C246 82 166 78 98 82C56 84 22 80 8 72C1 56 3 34 10 20Z" fill="#f9cbd6"/>
+    <path d="M18 14C70 9 150 5 230 6M24 80C90 86 170 84 268 78" fill="none" stroke="#f9cbd6" stroke-width="5" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- Familia: para todas las edades -->
+  <symbol id="familia" viewBox="0 0 130 104">
+    <use href="#hoja-forma" transform="translate(112 104) rotate(-75) scale(1.5)" fill="#93d9d0"/>
+    <use href="#hoja-forma" transform="translate(116 104) rotate(-45) scale(1.2)" fill="#22a497"/>
+    <path d="M62 104V66a15 15 0 0 1 30 0V104Z" fill="#f2a9bb"/>
+    <circle cx="77" cy="38" r="10" fill="#f2a9bb"/>
+    <path d="M36 104V70a13.5 13.5 0 0 1 27 0V104Z" fill="#2c7fcf"/>
+    <circle cx="49.5" cy="44.5" r="9" fill="#2c7fcf"/>
+    <path d="M14 104V84a10 10 0 0 1 20 0V104Z" fill="#22a497"/>
+    <circle cx="24" cy="65" r="7" fill="#22a497"/>
+    <path d="M64 24l-7.4 -7.3a4.9 4.9 0 1 1 7.4 -6.5a4.9 4.9 0 1 1 7.4 6.5Z" fill="#e8708f"/>
+  </symbol>
+
+  <!-- Árbol del Bienestar -->
+  <symbol id="arbolito" viewBox="0 0 70 76">
+    <g fill="none" stroke="#2c7fcf" stroke-linecap="round">
+      <path d="M35 76V34" stroke-width="4.5"/>
+      <path d="M35 52L22 40M35 46L48 34" stroke-width="3"/>
+    </g>
+    <use href="#hoja-forma" transform="translate(22 40) rotate(-140) scale(.9)" fill="#22a497"/>
+    <use href="#hoja-forma" transform="translate(22 40) rotate(-200) scale(.75)" fill="#93d9d0"/>
+    <use href="#hoja-forma" transform="translate(48 34) rotate(-40) scale(.9)" fill="#22a497"/>
+    <use href="#hoja-forma" transform="translate(48 34) rotate(20) scale(.7)" fill="#93d9d0"/>
+    <use href="#hoja-forma" transform="translate(35 34) rotate(-120) scale(1)" fill="#f2a9bb"/>
+    <use href="#hoja-forma" transform="translate(35 34) rotate(-60) scale(1)" fill="#e8708f"/>
+    <use href="#hoja-forma" transform="translate(35 30) rotate(-90) scale(.85)" fill="#5cbf7d"/>
   </symbol>
 
   <symbol id="i-fisioterapia" viewBox="0 0 24 24"><path d="M9 15l-1 -3l4 -2l4 1h3.5"/><path d="M3 19a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M11 6a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M12 17v-7"/><path d="M8 20h7l1 -4l4 -2"/><path d="M18 20h3"/></symbol>
@@ -76,6 +143,7 @@
   <symbol id="i-instagram" viewBox="0 0 24 24"><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10"/><path d="M8.5 12a3.5 3.5 0 1 0 7 0a3.5 3.5 0 0 0 -7 0"/><path d="M17 7v.01"/></symbol>
   <symbol id="i-arbol" viewBox="0 0 24 24"><path d="M12 13l-2 -2"/><path d="M12 12l2 -2"/><path d="M12 21v-13"/><path d="M9.824 16a3 3 0 0 1 -2.743 -3.69a3 3 0 0 1 .304 -4.833a3 3 0 0 1 4.615 -3.707a3 3 0 0 1 4.614 3.707a3 3 0 0 1 .305 4.833a3 3 0 0 1 -2.919 3.695h-4l-.176 -.005"/></symbol>
   <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M5 12l14 0"/><path d="M13 18l6 -6"/><path d="M13 6l6 6"/></symbol>
+  <symbol id="i-convenios" viewBox="0 0 24 24"><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"/><path d="M12 6l-3.293 3.293a1 1 0 0 0 0 1.414l.543 .543c.69 .69 1.81 .69 2.5 0l1 -1a3.182 3.182 0 0 1 4.5 0l2.25 2.25"/><path d="M12.5 15.5l2 2"/><path d="M15 13l2 2"/></symbol>
 </svg>
 
 <header class="barra" aria-label="Opciones de vista">
@@ -93,9 +161,10 @@
 
     <!-- Solapa interior (97 mm): la pregunta -->
     <article class="panel panel--solapa panel--borde-izq" data-orden="2">
-      <h2 class="titulo solapa__titulo">¿Cuándo consultar?</h2>
+      <svg class="deco mancha mancha--izq" viewBox="0 0 120 100" aria-hidden="true"><use href="#mancha-rosa"/></svg>
+      <h2 class="pildora pildora--solida solapa__titulo">¿Cuándo consultar?</h2>
       <p class="solapa__entrada">Si a vos o a alguien de tu familia le pasa algo de esto:</p>
-      <ul class="senales">
+      <ul class="tarjeta tarjeta--azul senales">
         <li>Cuesta aprender o concentrarse.</li>
         <li>Cuesta hablar o hacerse entender.</li>
         <li>La ansiedad o el estrés no dan tregua.</li>
@@ -104,33 +173,42 @@
         <li>Llegó el momento de prepararse para trabajar.</li>
       </ul>
       <div class="solapa__cierre">
-        <p class="titulo solapa__frase">Consultar a tiempo hace la diferencia.</p>
+        <div class="pincelada">
+          <svg class="pincelada__fondo" viewBox="0 0 300 90" preserveAspectRatio="none" aria-hidden="true"><use href="#pincelada"/></svg>
+          <p>Consultar a tiempo hace la diferencia.</p>
+        </div>
         <p class="abrir">Abrí y conocé al equipo <svg class="icono"><use href="#i-flecha"/></svg></p>
       </div>
+      <svg class="deco ola ola--invertida" viewBox="0 0 400 60" preserveAspectRatio="none" aria-hidden="true"><use href="#olas"/></svg>
     </article>
 
     <!-- Contraportada: contacto y llamada a la acción -->
     <article class="panel panel--contra" data-orden="6">
+      <svg class="deco mancha mancha--der" viewBox="0 0 120 100" aria-hidden="true"><use href="#mancha-celeste"/></svg>
       <div>
-      <h2 class="titulo contra__titulo">Te esperamos</h2>
-      <ul class="datos">
-        <li>
-          <span class="datos__icono"><svg class="icono"><use href="#i-ubicacion"/></svg></span>
-          <span><span class="etiqueta">Dirección</span><span class="datos__valor">Manuel Oribe 537, Durazno</span></span>
-        </li>
-        <li>
-          <span class="datos__icono"><svg class="icono"><use href="#i-telefono"/></svg></span>
-          <span><span class="etiqueta">Teléfono</span><a class="datos__valor datos__valor--grande" href="tel:+59843628311">4362 8311</a></span>
-        </li>
-        <li>
-          <span class="datos__icono"><svg class="icono"><use href="#i-horario"/></svg></span>
-          <span><span class="etiqueta">Horario</span><span class="datos__valor">9:00 a 12:00 y 14:00 a 19:00</span></span>
-        </li>
-        <li>
-          <span class="datos__icono"><svg class="icono"><use href="#i-instagram"/></svg></span>
-          <span><span class="etiqueta">Instagram</span><a class="datos__valor" href="https://www.instagram.com/ipd_durazno/">@IPD_Durazno</a></span>
-        </li>
-      </ul>
+        <h2 class="pildora pildora--suave contra__titulo">
+          <svg class="chispa chispa--izq" viewBox="0 0 30 30" aria-hidden="true"><use href="#chispas"/></svg>
+          Te esperamos
+          <svg class="chispa chispa--der" viewBox="0 0 30 30" aria-hidden="true"><use href="#chispas"/></svg>
+        </h2>
+        <ul class="tarjeta tarjeta--menta datos">
+          <li>
+            <span class="insignia tono-rosa"><svg class="icono"><use href="#i-ubicacion"/></svg></span>
+            <span><span class="etiqueta">Dirección</span><span class="datos__valor">Manuel Oribe 537, Durazno</span></span>
+          </li>
+          <li>
+            <span class="insignia tono-verde"><svg class="icono"><use href="#i-telefono"/></svg></span>
+            <span><span class="etiqueta">Teléfono</span><a class="datos__valor datos__valor--grande" href="tel:+59843628311">4362 8311</a></span>
+          </li>
+          <li>
+            <span class="insignia tono-turquesa"><svg class="icono"><use href="#i-horario"/></svg></span>
+            <span><span class="etiqueta">Horario</span><span class="datos__valor">9:00 a 12:00 y 14:00 a 19:00</span></span>
+          </li>
+          <li>
+            <span class="insignia tono-azul"><svg class="icono"><use href="#i-instagram"/></svg></span>
+            <span><span class="etiqueta">Instagram</span><a class="datos__valor" href="https://www.instagram.com/ipd_durazno/">@IPD_Durazno</a></span>
+          </li>
+        </ul>
       </div>
       <div class="qr">
         <div class="qr__codigo">
@@ -140,23 +218,29 @@
         </div>
         <p class="qr__texto"><strong>Seguinos en Instagram</strong>Escaneá el código con la cámara del celular.</p>
       </div>
-      <div class="contra__pie marca">
-        <svg class="marca__logo" viewBox="0 0 100 100" role="img" aria-label="Logo IPD"><use href="#logo-ipd"/></svg>
-        <p><span class="marca__sigla">IPD</span><span class="marca__nombre">Instituto Psicopedagógico de Durazno</span></p>
+      <div class="contra__pie">
+        <svg class="contra__logo" viewBox="0 0 100 100" role="img" aria-label="Logo IPD"><use href="#logo-ipd"/></svg>
+        <p><span class="contra__sigla">IPD</span><span class="contra__nombre">Instituto Psicopedagógico de Durazno</span></p>
       </div>
+      <svg class="deco ola" viewBox="0 0 400 60" preserveAspectRatio="none" aria-hidden="true"><use href="#olas"/></svg>
     </article>
 
     <!-- Portada -->
     <article class="panel panel--portada panel--borde-der" data-orden="1">
-      <div class="marca">
-        <div class="marca__logo"><svg viewBox="0 0 100 100" role="img" aria-label="Logo IPD"><use href="#logo-ipd"/></svg></div>
-        <p><span class="marca__sigla">IPD</span><span class="marca__nombre">Instituto Psicopedagógico<br>de Durazno</span></p>
+      <svg class="deco mancha mancha--izq" viewBox="0 0 120 100" aria-hidden="true"><use href="#mancha-rosa"/></svg>
+      <svg class="deco mancha mancha--der" viewBox="0 0 120 100" aria-hidden="true"><use href="#mancha-celeste"/></svg>
+      <h1 class="portada__titulo">Tu bienestar tiene equipo.</h1>
+      <div class="portada__marca">
+        <svg class="portada__lazo" viewBox="0 0 120 150" aria-hidden="true"><use href="#lazo"/></svg>
+        <svg class="portada__logo" viewBox="0 0 100 100" role="img" aria-label="Logo IPD"><use href="#logo-ipd"/></svg>
+        <p class="sello"><span class="sello__numero">33</span><span class="sello__texto">años en<br>Durazno</span></p>
       </div>
-      <p class="portada__aviso"><svg class="icono"><use href="#i-lazo"/></svg><span class="etiqueta">Salud mental</span></p>
-      <h1 class="titulo portada__titulo">Tu bienestar tiene equipo.</h1>
+      <p class="portada__sigla">IPD</p>
+      <p class="portada__nombre">Instituto Psicopedagógico de Durazno</p>
+      <p class="portada__salud">Salud mental</p>
       <p class="portada__bajada">Siete especialidades para todas las edades, en un mismo lugar.</p>
-      <figure class="portada__ilustracion" aria-hidden="true"><svg viewBox="0 0 240 242"><use href="#lazo-brote"/></svg></figure>
-      <p class="sello"><span class="sello__numero">33</span><span class="sello__texto">años en<br>Durazno</span></p>
+      <svg class="deco ramo ramo--portada" viewBox="0 0 80 80" aria-hidden="true"><use href="#ramo-abanico"/></svg>
+      <svg class="deco ola ola--alta" viewBox="0 0 400 60" preserveAspectRatio="none" aria-hidden="true"><use href="#olas"/></svg>
     </article>
   </section>
 
@@ -165,43 +249,50 @@
 
     <!-- Interior izquierdo: la promesa -->
     <article class="panel panel--promesa panel--borde-izq" data-orden="3">
+      <svg class="deco mancha mancha--izq" viewBox="0 0 120 100" aria-hidden="true"><use href="#mancha-rosa"/></svg>
       <p class="etiqueta">Quiénes somos</p>
-      <h2 class="titulo promesa__titulo">Aprender, comunicarse, moverse y participar también es salud mental.</h2>
+      <h2 class="pildora pildora--solida promesa__titulo">Aprender, comunicarse, moverse y participar también es salud mental.</h2>
       <p class="promesa__texto">En el IPD acompañamos a cada persona a su ritmo, respetando sus intereses y posibilidades, para que gane confianza y autonomía.</p>
       <ul class="cifras">
-        <li><span class="cifras__numero">33</span><span class="cifras__texto">años de trayectoria</span></li>
-        <li><span class="cifras__numero">25</span><span class="cifras__texto">años con talleres para personas adultas</span></li>
-        <li><span class="cifras__numero">7</span><span class="cifras__texto">especialidades en un mismo lugar</span></li>
+        <li><span class="cifras__numero tono-rosa">33</span><span class="cifras__texto">años de trayectoria</span></li>
+        <li><span class="cifras__numero tono-turquesa">25</span><span class="cifras__texto">años con talleres para personas adultas</span></li>
+        <li><span class="cifras__numero tono-verde">7</span><span class="cifras__texto">especialidades en un mismo lugar</span></li>
       </ul>
-      <svg class="ramita" viewBox="0 0 70 92" aria-hidden="true"><use href="#ramita" transform="rotate(-10 35 70)"/></svg>
+      <svg class="deco familia" viewBox="0 0 130 104" aria-hidden="true"><use href="#familia"/></svg>
+      <svg class="deco ola" viewBox="0 0 400 60" preserveAspectRatio="none" aria-hidden="true"><use href="#olas"/></svg>
     </article>
 
     <!-- Interior central: especialidades -->
     <article class="panel panel--especialidades" data-orden="4">
-      <p class="etiqueta">Qué hacemos</p>
-      <h2 class="titulo especialidades__titulo">Nuestras especialidades</h2>
+      <h2 class="pildora pildora--suave especialidades__titulo">
+        <svg class="chispa chispa--izq" viewBox="0 0 30 30" aria-hidden="true"><use href="#chispas"/></svg>
+        Nuestras especialidades
+        <svg class="chispa chispa--der" viewBox="0 0 30 30" aria-hidden="true"><use href="#chispas"/></svg>
+      </h2>
       <ul class="especialidades">
-        <li><span class="especialidades__icono"><svg class="icono"><use href="#i-fisioterapia"/></svg></span><div><h3 class="titulo">Fisioterapia</h3><p>Movimiento, postura y rehabilitación</p></div></li>
-        <li><span class="especialidades__icono"><svg class="icono"><use href="#i-fonoaudiologia"/></svg></span><div><h3 class="titulo">Fonoaudiología</h3><p>Habla, lenguaje y comunicación</p></div></li>
-        <li><span class="especialidades__icono"><svg class="icono"><use href="#i-psicopedagogia"/></svg></span><div><h3 class="titulo">Psicopedagogía</h3><p>Aprendizaje y estudio</p></div></li>
-        <li><span class="especialidades__icono"><svg class="icono"><use href="#i-psicologia"/></svg></span><div><h3 class="titulo">Psicología</h3><p>Emociones, ansiedad y vínculos</p></div></li>
-        <li><span class="especialidades__icono"><svg class="icono"><use href="#i-psicomotricidad"/></svg></span><div><h3 class="titulo">Psicomotricidad</h3><p>Cuerpo, juego y desarrollo</p></div></li>
-        <li><span class="especialidades__icono"><svg class="icono"><use href="#i-terapia-ocupacional"/></svg></span><div><h3 class="titulo">Terapia ocupacional</h3><p>Autonomía en la vida diaria</p></div></li>
-        <li><span class="especialidades__icono"><svg class="icono"><use href="#i-talleres"/></svg></span><div><h3 class="titulo">Talleres preocupacionales</h3><p>Preparación para el mundo laboral</p></div></li>
+        <li class="tono-verde"><span class="insignia"><svg class="icono"><use href="#i-fisioterapia"/></svg></span><div><h3>Fisioterapia</h3><p>Movimiento, postura y rehabilitación</p></div></li>
+        <li class="tono-azul"><span class="insignia"><svg class="icono"><use href="#i-fonoaudiologia"/></svg></span><div><h3>Fonoaudiología</h3><p>Habla, lenguaje y comunicación</p></div></li>
+        <li class="tono-turquesa"><span class="insignia"><svg class="icono"><use href="#i-psicopedagogia"/></svg></span><div><h3>Psicopedagogía</h3><p>Aprendizaje y estudio</p></div></li>
+        <li class="tono-rosa"><span class="insignia"><svg class="icono"><use href="#i-psicologia"/></svg></span><div><h3>Psicología</h3><p>Emociones, ansiedad y vínculos</p></div></li>
+        <li class="tono-verde"><span class="insignia"><svg class="icono"><use href="#i-psicomotricidad"/></svg></span><div><h3>Psicomotricidad</h3><p>Cuerpo, juego y desarrollo</p></div></li>
+        <li class="tono-azul"><span class="insignia"><svg class="icono"><use href="#i-terapia-ocupacional"/></svg></span><div><h3>Terapia ocupacional</h3><p>Autonomía en la vida diaria</p></div></li>
+        <li class="tono-turquesa"><span class="insignia"><svg class="icono"><use href="#i-talleres"/></svg></span><div><h3>Talleres preocupacionales</h3><p>Preparación para el mundo laboral</p></div></li>
       </ul>
+      <svg class="deco ola ola--invertida" viewBox="0 0 400 60" preserveAspectRatio="none" aria-hidden="true"><use href="#olas"/></svg>
     </article>
 
     <!-- Interior derecho (97 mm): el pedido -->
     <article class="panel panel--pedido panel--borde-der" data-orden="5">
+      <svg class="deco mancha mancha--der" viewBox="0 0 120 100" aria-hidden="true"><use href="#mancha-rosa"/></svg>
       <p class="etiqueta">Primer paso</p>
-      <h2 class="titulo pedido__titulo">Pedir ayuda también es cuidarse.</h2>
+      <h2 class="pildora pildora--solida pedido__titulo">Pedir ayuda también es cuidarse.</h2>
       <p class="pedido__texto">Llamanos o pasá por el instituto. Te escuchamos y te orientamos.</p>
       <div class="llamada">
-        <span class="llamada__icono"><svg class="icono"><use href="#i-telefono"/></svg></span>
+        <span class="insignia tono-rosa"><svg class="icono"><use href="#i-telefono"/></svg></span>
         <p><a class="llamada__numero" href="tel:+59843628311">4362 8311</a><span class="llamada__direccion">Manuel Oribe 537, Durazno</span></p>
       </div>
-      <div class="convenios">
-        <p class="etiqueta">Convenios</p>
+      <div class="tarjeta tarjeta--turquesa convenios">
+        <p class="encabezado tono-turquesa"><span class="insignia"><svg class="icono"><use href="#i-convenios"/></svg></span><span class="encabezado__texto">Convenios</span></p>
         <ul>
           <li>BPS</li>
           <li>Tutela Militar y Policial</li>
@@ -210,7 +301,12 @@
           <li>Asistencia Integral</li>
         </ul>
       </div>
-      <p class="arbol"><svg class="icono"><use href="#i-arbol"/></svg><span>En el stand, dejá una palabra o un deseo en nuestro Árbol del Bienestar.</span></p>
+      <svg class="deco ramo ramo--pedido" viewBox="0 0 70 110" aria-hidden="true"><use href="#ramo-tallo"/></svg>
+      <div class="arbol">
+        <svg class="arbol__dibujo" viewBox="0 0 70 76" aria-hidden="true"><use href="#arbolito"/></svg>
+        <p>En el stand, dejá una palabra o un deseo en nuestro <strong>Árbol del Bienestar</strong>.</p>
+      </div>
+      <svg class="deco ola" viewBox="0 0 400 60" preserveAspectRatio="none" aria-hidden="true"><use href="#olas"/></svg>
     </article>
   </section>
 </main>
