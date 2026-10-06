@@ -1,6 +1,6 @@
 # Folleto IPD · Mes de la Salud Mental
 
-Tríptico del Instituto Psicopedagógico de Durazno para el evento de Salud Mental. Sigue el estilo del folleto anterior del IPD: fondo blanco con manchas pastel, hojas, títulos en píldoras, íconos en círculos de color y olas al pie, con un relieve suave (degradados y sombras difusas) que le da volumen. El verde es el color principal porque es el color del mes este año, y el rosa, el turquesa y el azul vienen del logo.
+Tríptico del Instituto Psicopedagógico de Durazno para el evento de Salud Mental. Sigue el estilo del folleto anterior del IPD: fondo blanco con manchas pastel, hojas, títulos en píldoras, íconos en círculos de color y olas al pie, con sombras suaves debajo de círculos, píldoras y tarjetas. El verde es el color principal porque es el color del mes este año, y el rosa, el turquesa y el azul vienen del logo.
 
 ## Archivos para usar
 
@@ -65,7 +65,7 @@ npm run exportar
 **Queda para la imprenta o el IPD**
 
 - **Color:** el PDF está en RGB. Si la imprenta pide CMYK o PDF/X-1a, que lo convierta con su perfil de color, y pedirle una prueba impresa para revisar los verdes.
-- **Sombras:** las sombras suaves del relieve usan transparencias, que el PDF guarda como máscaras a 300 ppp. Si la imprenta aplana el archivo, que lo haga a 300 ppp o más.
+- **Sombras:** las sombras suaves usan transparencias, que el PDF guarda como máscaras a 300 ppp. Si la imprenta aplana el archivo, que lo haga a 300 ppp o más.
 - **Texto en negro puro:** el texto es azul marino, no negro 100 % K. En los tamaños que usa el folleto no da problemas de registro, pero conviene consultarlo con la imprenta.
 - **Papel sugerido:** estucado mate de 150 a 170 g/m², que se lee mejor que el brillo.
 - **Prueba física:** imprimir una copia, doblarla, leerla entera y escanear el QR con un celular. Que otra persona la revise.
