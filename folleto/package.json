@@ -1,0 +1,14 @@
+{
+  "name": "folleto-ipd-salud-mental",
+  "private": true,
+  "description": "Tríptico del Instituto Psicopedagógico de Durazno para el Mes de la Salud Mental",
+  "scripts": {
+    "exportar": "node exportar.cjs",
+    "qr": "node qr.cjs"
+  },
+  "devDependencies": {
+    "pdf-lib": "1.17.1",
+    "playwright": "1.56.1",
+    "qrcode": "1.5.4"
+  }
+}

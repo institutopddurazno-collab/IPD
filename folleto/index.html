@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Folleto IPD Salud Mental</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<!-- Íconos: Tabler Icons (MIT). Logo y lazo: dibujados para este folleto. -->
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+  <defs>
+    <clipPath id="logo-circulo"><circle cx="50" cy="50" r="48"/></clipPath>
+    <path id="hoja-forma" d="M0 0C5 -7 17 -8 26 0C17 8 5 7 0 0Z"/>
+  </defs>
+
+  <symbol id="logo-ipd" viewBox="0 0 100 100">
+    <g clip-path="url(#logo-circulo)">
+      <rect x="0" y="0" width="50" height="50" fill="#f2a5ac"/>
+      <rect x="50" y="0" width="50" height="50" fill="#26ad9f"/>
+      <rect x="0" y="50" width="50" height="50" fill="#81998b"/>
+      <rect x="50" y="50" width="50" height="50" fill="#2c7fcf"/>
+      <circle cx="55" cy="26" r="7" fill="#f2a5ac"/>
+      <circle cx="74" cy="55" r="7" fill="#26ad9f"/>
+      <circle cx="45" cy="74" r="7" fill="#2c7fcf"/>
+      <circle cx="26" cy="45" r="7" fill="#81998b"/>
+      <g fill="none" stroke="#fff" stroke-width="2.4">
+        <path d="M50 0V21.1A7 7 0 1 1 50 30.9V50"/>
+        <path d="M50 50H69.1A7 7 0 1 0 78.9 50H100"/>
+        <path d="M50 50V69.1A7 7 0 1 0 50 78.9V100"/>
+        <path d="M0 50H21.1A7 7 0 1 1 30.9 50H50"/>
+      </g>
+    </g>
+  </symbol>
+
+  <!-- Lazo verde de la salud mental que brota -->
+  <symbol id="lazo-brote" viewBox="0 0 240 280">
+    <circle cx="128" cy="168" r="104" fill="#1d6c45"/>
+    <circle cx="128" cy="168" r="74" fill="#22784c"/>
+    <g fill="none" stroke-linecap="butt">
+      <path d="M64 290C84 246 102 212 114 180C130 144 152 128 150 100C148 76 132 62 114 62C96 62 80 76 78 100C76 128 98 144 114 180C126 212 144 246 164 290" stroke="#8fcd6c" stroke-width="27"/>
+      <path d="M89.3 137C96.5 149 106 162 114 180C126 212 144 246 164 290" stroke="#14502f" stroke-width="35"/>
+      <path d="M114 62C96 62 80 76 78 100C76 128 98 144 114 180C126 212 144 246 164 290" stroke="#b9e591" stroke-width="27"/>
+    </g>
+    <path d="M114 50V36" fill="none" stroke="#e5f2e7" stroke-width="4" stroke-linecap="round"/>
+    <use href="#hoja-forma" transform="translate(114 42) rotate(-150) scale(1.25)" fill="#e5f2e7"/>
+    <use href="#hoja-forma" transform="translate(114 37) rotate(-35) scale(1.45)" fill="#e5f2e7"/>
+    <use href="#hoja-forma" transform="translate(200 70) rotate(-120) scale(.8)" fill="#c4e79a"/>
+    <use href="#hoja-forma" transform="translate(30 150) rotate(-60) scale(.7)" fill="#4fae6d"/>
+  </symbol>
+
+  <symbol id="ramita" viewBox="0 0 70 140">
+    <path d="M36 140C34 104 30 70 40 8" fill="none" stroke="#4fae6d" stroke-width="2.6" stroke-linecap="round"/>
+    <g fill="#4fae6d">
+      <use href="#hoja-forma" transform="translate(35 112) rotate(-160) scale(1.05)"/>
+      <use href="#hoja-forma" transform="translate(34 92) rotate(-25) scale(1.1)"/>
+      <use href="#hoja-forma" transform="translate(34 70) rotate(-155) scale(.95)"/>
+      <use href="#hoja-forma" transform="translate(36 50) rotate(-30) scale(.95)"/>
+      <use href="#hoja-forma" transform="translate(37 30) rotate(-150) scale(.75)"/>
+    </g>
+    <use href="#hoja-forma" transform="translate(40 9) rotate(-80) scale(.7)" fill="#c4e79a"/>
+  </symbol>
+
+  <symbol id="i-fisioterapia" viewBox="0 0 24 24"><path d="M9 15l-1 -3l4 -2l4 1h3.5"/><path d="M3 19a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M11 6a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M12 17v-7"/><path d="M8 20h7l1 -4l4 -2"/><path d="M18 20h3"/></symbol>
+  <symbol id="i-fonoaudiologia" viewBox="0 0 24 24"><path d="M12 11v.01"/><path d="M8 11v.01"/><path d="M16 11v.01"/><path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3l12 0"/></symbol>
+  <symbol id="i-psicopedagogia" viewBox="0 0 24 24"><path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0"/><path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0"/><path d="M3 6l0 13"/><path d="M12 6l0 13"/><path d="M21 6l0 13"/></symbol>
+  <symbol id="i-psicologia" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 0 -8.012 8.946"/><path d="M9 10h.01"/><path d="M15 10h.01"/><path d="M9.5 15a3.59 3.59 0 0 0 2.774 .99"/><path d="M18.994 21.5l2.518 -2.58a1.74 1.74 0 0 0 .004 -2.413a1.627 1.627 0 0 0 -2.346 -.005l-.168 .172l-.168 -.172a1.627 1.627 0 0 0 -2.346 -.004a1.74 1.74 0 0 0 -.004 2.412l2.51 2.59"/></symbol>
+  <symbol id="i-psicomotricidad" viewBox="0 0 24 24"><path d="M13 21l3.5 -2l-4.5 -4l2 -4.5"/><path d="M5 7l4 3l5 .5l4 2.5l2.5 3"/><path d="M4 20l5 -1l1.5 -2"/><path d="M13.007 8a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M6.007 3.5a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0"/></symbol>
+  <symbol id="i-terapia-ocupacional" viewBox="0 0 24 24"><path d="M8 11v-3.5a1.5 1.5 0 0 1 3 0v2.5"/><path d="M11 9.5v-3a1.5 1.5 0 0 1 3 0v3.5"/><path d="M14 7.5a1.5 1.5 0 0 1 3 0v2.5"/><path d="M17 9.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47"/></symbol>
+  <symbol id="i-talleres" viewBox="0 0 24 24"><path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4"/><path d="M14.5 5.5l4 4"/><path d="M12 8l-5 -5l-4 4l5 5"/><path d="M7 8l-1.5 1.5"/><path d="M16 12l5 5l-4 4l-5 -5"/><path d="M16 17l-1.5 1.5"/></symbol>
+  <symbol id="i-lazo" viewBox="0 0 24 24"><path d="M7 21s9.286 -9.841 9.286 -13.841a3.864 3.864 0 0 0 -1.182 -3.008a4.13 4.13 0 0 0 -3.104 -1.144a4.13 4.13 0 0 0 -3.104 1.143a3.864 3.864 0 0 0 -1.182 3.01c0 4 9.286 13.84 9.286 13.84"/></symbol>
+  <symbol id="i-ubicacion" viewBox="0 0 24 24"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"/><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0"/></symbol>
+  <symbol id="i-telefono" viewBox="0 0 24 24"><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"/></symbol>
+  <symbol id="i-horario" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 7v5l3 3"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10"/><path d="M8.5 12a3.5 3.5 0 1 0 7 0a3.5 3.5 0 0 0 -7 0"/><path d="M17 7v.01"/></symbol>
+  <symbol id="i-arbol" viewBox="0 0 24 24"><path d="M12 13l-2 -2"/><path d="M12 12l2 -2"/><path d="M12 21v-13"/><path d="M9.824 16a3 3 0 0 1 -2.743 -3.69a3 3 0 0 1 .304 -4.833a3 3 0 0 1 4.615 -3.707a3 3 0 0 1 4.614 3.707a3 3 0 0 1 .305 4.833a3 3 0 0 1 -2.919 3.695h-4l-.176 -.005"/></symbol>
+  <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M5 12l14 0"/><path d="M13 18l6 -6"/><path d="M13 6l6 6"/></symbol>
+</svg>
+
+<header class="barra" aria-label="Opciones de vista">
+  <div class="barra__grupo" role="group" aria-label="Vista">
+    <button type="button" id="vista-imprenta" aria-pressed="true">Hojas para imprenta</button>
+    <button type="button" id="vista-lectura" aria-pressed="false">En orden de lectura</button>
+  </div>
+  <label for="guias"><input type="checkbox" id="guias"> Guías de corte y pliegue</label>
+</header>
+
+<main class="folleto" id="folleto">
+
+  <!-- ===================== CARA EXTERIOR ===================== -->
+  <section class="hoja hoja--exterior" aria-label="Cara exterior: solapa, contraportada y portada">
+
+    <!-- Solapa interior (97 mm): la pregunta -->
+    <article class="panel panel--solapa panel--borde-izq" data-orden="2">
+      <h2 class="titulo solapa__titulo">¿Cuándo consultar?</h2>
+      <p class="solapa__entrada">Si a vos o a alguien de tu familia le pasa algo de esto:</p>
+      <ul class="senales">
+        <li>Cuesta aprender o concentrarse.</li>
+        <li>Cuesta hablar o hacerse entender.</li>
+        <li>La ansiedad o el estrés no dan tregua.</li>
+        <li>Moverse o coordinar es un desafío.</li>
+        <li>Hace falta más autonomía en el día a día.</li>
+        <li>Llegó el momento de prepararse para trabajar.</li>
+      </ul>
+      <div class="solapa__cierre">
+        <p class="titulo solapa__frase">Consultar a tiempo hace la diferencia.</p>
+        <p class="abrir">Abrí y conocé al equipo <svg class="icono"><use href="#i-flecha"/></svg></p>
+      </div>
+    </article>
+
+    <!-- Contraportada: contacto y llamada a la acción -->
+    <article class="panel panel--contra" data-orden="6">
+      <div>
+      <h2 class="titulo contra__titulo">Te esperamos</h2>
+      <ul class="datos">
+        <li>
+          <span class="datos__icono"><svg class="icono"><use href="#i-ubicacion"/></svg></span>
+          <span><span class="etiqueta">Dirección</span><span class="datos__valor">Manuel Oribe 537, Durazno</span></span>
+        </li>
+        <li>
+          <span class="datos__icono"><svg class="icono"><use href="#i-telefono"/></svg></span>
+          <span><span class="etiqueta">Teléfono</span><a class="datos__valor datos__valor--grande" href="tel:+59843628311">4362 8311</a></span>
+        </li>
+        <li>
+          <span class="datos__icono"><svg class="icono"><use href="#i-horario"/></svg></span>
+          <span><span class="etiqueta">Horario</span><span class="datos__valor">9:00 a 12:00 y 14:00 a 19:00</span></span>
+        </li>
+        <li>
+          <span class="datos__icono"><svg class="icono"><use href="#i-instagram"/></svg></span>
+          <span><span class="etiqueta">Instagram</span><a class="datos__valor" href="https://www.instagram.com/ipd_durazno/">@IPD_Durazno</a></span>
+        </li>
+      </ul>
+      </div>
+      <div class="qr">
+        <div class="qr__codigo">
+          <!-- QR:inicio -->
+          <svg viewBox="0 0 29 29" shape-rendering="crispEdges" role="img" aria-label="Código QR al Instagram del IPD"><path fill="none" stroke="currentColor" d="M0 0.5h7m3 0h2m1 0h1m2 0h1m1 0h3m1 0h7M0 1.5h1m5 0h1m3 0h1m1 0h4m1 0h2m3 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m1 0h1m2 0h2m1 0h1m1 0h1m2 0h2m1 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h3m1 0h2m3 0h1m1 0h1m2 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h2m2 0h2m2 0h4m2 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m1 0h1m4 0h3m1 0h1m2 0h1m1 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h5m1 0h1m5 0h1M0 8.5h1m1 0h5m2 0h4m3 0h2m1 0h1m2 0h5M1 9.5h5m2 0h3m2 0h1m2 0h9m3 0h1M1 10.5h1m2 0h3m2 0h1m1 0h1m1 0h4m3 0h3M0 11.5h1m1 0h2m4 0h4m1 0h1m1 0h1m7 0h1m1 0h1m1 0h1M0 12.5h5m1 0h7m1 0h2m1 0h2m6 0h2M0 13.5h1m1 0h4m3 0h2m5 0h7m1 0h1m3 0h1M1 14.5h6m2 0h2m4 0h1m1 0h1m4 0h2m1 0h2M7 15.5h1m2 0h2m2 0h1m4 0h1m1 0h4m2 0h1M1 16.5h1m3 0h5m2 0h1m2 0h3m2 0h1m2 0h1m1 0h2M0 17.5h1m1 0h2m6 0h1m2 0h2m1 0h5m1 0h3m1 0h1m1 0h1M0 18.5h1m1 0h1m1 0h1m1 0h1m1 0h2m1 0h6m1 0h1m1 0h2m1 0h1m2 0h1M0 19.5h1m1 0h3m3 0h2m1 0h1m1 0h1m1 0h2m2 0h2m1 0h3m2 0h1M0 20.5h1m2 0h1m1 0h2m2 0h1m1 0h2m1 0h4m2 0h5m1 0h3M8 21.5h2m1 0h1m4 0h1m3 0h1m3 0h5M0 22.5h7m2 0h1m1 0h1m3 0h1m2 0h3m1 0h1m1 0h3M0 23.5h1m5 0h1m1 0h2m4 0h3m1 0h3m3 0h1m2 0h2M0 24.5h1m1 0h3m1 0h1m1 0h1m1 0h1m4 0h1m1 0h1m2 0h5m1 0h1M0 25.5h1m1 0h3m1 0h1m1 0h1m4 0h2m1 0h1m1 0h2m3 0h1m1 0h4M0 26.5h1m1 0h3m1 0h1m1 0h3m1 0h1m2 0h2m5 0h6M0 27.5h1m5 0h1m9 0h1m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1M0 28.5h7m1 0h4m2 0h1m1 0h1m2 0h1m1 0h1m1 0h4"/></svg>
+          <!-- QR:fin -->
+        </div>
+        <p class="qr__texto"><strong>Seguinos en Instagram</strong>Escaneá el código con la cámara del celular.</p>
+      </div>
+      <div class="contra__pie marca">
+        <svg class="marca__logo" viewBox="0 0 100 100" role="img" aria-label="Logo IPD"><use href="#logo-ipd"/></svg>
+        <p><span class="marca__sigla">IPD</span><span class="marca__nombre">Instituto Psicopedagógico de Durazno</span></p>
+      </div>
+    </article>
+
+    <!-- Portada -->
+    <article class="panel panel--portada panel--borde-der" data-orden="1">
+      <div class="marca">
+        <div class="marca__logo"><svg viewBox="0 0 100 100" role="img" aria-label="Logo IPD"><use href="#logo-ipd"/></svg></div>
+        <p><span class="marca__sigla">IPD</span><span class="marca__nombre">Instituto Psicopedagógico<br>de Durazno</span></p>
+      </div>
+      <p class="portada__aviso"><svg class="icono"><use href="#i-lazo"/></svg><span class="etiqueta">Salud mental</span></p>
+      <h1 class="titulo portada__titulo">Tu bienestar tiene equipo.</h1>
+      <p class="portada__bajada">Siete especialidades para todas las edades, en un mismo lugar.</p>
+      <figure class="portada__ilustracion" aria-hidden="true"><svg viewBox="0 0 240 242"><use href="#lazo-brote"/></svg></figure>
+      <p class="sello"><span class="sello__numero">33</span><span class="sello__texto">años en<br>Durazno</span></p>
+    </article>
+  </section>
+
+  <!-- ===================== CARA INTERIOR ===================== -->
+  <section class="hoja hoja--interior" aria-label="Cara interior: quiénes somos, especialidades y cómo empezar">
+
+    <!-- Interior izquierdo: la promesa -->
+    <article class="panel panel--promesa panel--borde-izq" data-orden="3">
+      <p class="etiqueta">Quiénes somos</p>
+      <h2 class="titulo promesa__titulo">Aprender, comunicarse, moverse y participar también es salud mental.</h2>
+      <p class="promesa__texto">En el IPD acompañamos a cada persona a su ritmo, respetando sus intereses y posibilidades, para que gane confianza y autonomía.</p>
+      <ul class="cifras">
+        <li><span class="cifras__numero">33</span><span class="cifras__texto">años de trayectoria</span></li>
+        <li><span class="cifras__numero">25</span><span class="cifras__texto">años con talleres para personas adultas</span></li>
+        <li><span class="cifras__numero">7</span><span class="cifras__texto">especialidades en un mismo lugar</span></li>
+      </ul>
+      <svg class="ramita" viewBox="0 0 70 92" aria-hidden="true"><use href="#ramita" transform="rotate(-10 35 70)"/></svg>
+    </article>
+
+    <!-- Interior central: especialidades -->
+    <article class="panel panel--especialidades" data-orden="4">
+      <p class="etiqueta">Qué hacemos</p>
+      <h2 class="titulo especialidades__titulo">Nuestras especialidades</h2>
+      <ul class="especialidades">
+        <li><span class="especialidades__icono"><svg class="icono"><use href="#i-fisioterapia"/></svg></span><div><h3 class="titulo">Fisioterapia</h3><p>Movimiento, postura y rehabilitación</p></div></li>
+        <li><span class="especialidades__icono"><svg class="icono"><use href="#i-fonoaudiologia"/></svg></span><div><h3 class="titulo">Fonoaudiología</h3><p>Habla, lenguaje y comunicación</p></div></li>
+        <li><span class="especialidades__icono"><svg class="icono"><use href="#i-psicopedagogia"/></svg></span><div><h3 class="titulo">Psicopedagogía</h3><p>Aprendizaje y estudio</p></div></li>
+        <li><span class="especialidades__icono"><svg class="icono"><use href="#i-psicologia"/></svg></span><div><h3 class="titulo">Psicología</h3><p>Emociones, ansiedad y vínculos</p></div></li>
+        <li><span class="especialidades__icono"><svg class="icono"><use href="#i-psicomotricidad"/></svg></span><div><h3 class="titulo">Psicomotricidad</h3><p>Cuerpo, juego y desarrollo</p></div></li>
+        <li><span class="especialidades__icono"><svg class="icono"><use href="#i-terapia-ocupacional"/></svg></span><div><h3 class="titulo">Terapia ocupacional</h3><p>Autonomía en la vida diaria</p></div></li>
+        <li><span class="especialidades__icono"><svg class="icono"><use href="#i-talleres"/></svg></span><div><h3 class="titulo">Talleres preocupacionales</h3><p>Preparación para el mundo laboral</p></div></li>
+      </ul>
+    </article>
+
+    <!-- Interior derecho (97 mm): el pedido -->
+    <article class="panel panel--pedido panel--borde-der" data-orden="5">
+      <p class="etiqueta">Primer paso</p>
+      <h2 class="titulo pedido__titulo">Pedir ayuda también es cuidarse.</h2>
+      <p class="pedido__texto">Llamanos o pasá por el instituto. Te escuchamos y te orientamos.</p>
+      <div class="llamada">
+        <span class="llamada__icono"><svg class="icono"><use href="#i-telefono"/></svg></span>
+        <p><a class="llamada__numero" href="tel:+59843628311">4362 8311</a><span class="llamada__direccion">Manuel Oribe 537, Durazno</span></p>
+      </div>
+      <div class="convenios">
+        <p class="etiqueta">Convenios</p>
+        <ul>
+          <li>BPS</li>
+          <li>Tutela Militar y Policial</li>
+          <li>Seguro Americano</li>
+          <li>Blue Cross &amp; Blue Shield</li>
+          <li>Asistencia Integral</li>
+        </ul>
+      </div>
+      <p class="arbol"><svg class="icono"><use href="#i-arbol"/></svg><span>En el stand, dejá una palabra o un deseo en nuestro Árbol del Bienestar.</span></p>
+    </article>
+  </section>
+</main>
+
+<script>
+(function () {
+  var folleto = document.getElementById('folleto');
+  var hojas = Array.prototype.slice.call(folleto.querySelectorAll('.hoja'));
+  var paneles = Array.prototype.slice.call(folleto.querySelectorAll('.panel'));
+  var origen = paneles.map(function (p) { return { panel: p, padre: p.parentNode }; });
+  var lectura = document.createElement('div');
+  lectura.className = 'lectura';
+  var botonImprenta = document.getElementById('vista-imprenta');
+  var botonLectura = document.getElementById('vista-lectura');
+  var guias = document.getElementById('guias');
+
+  function verLectura() {
+    paneles
+      .slice()
+      .sort(function (a, b) { return a.dataset.orden - b.dataset.orden; })
+      .forEach(function (p) { lectura.appendChild(p); });
+    hojas.forEach(function (h) { h.hidden = true; });
+    folleto.appendChild(lectura);
+    botonImprenta.setAttribute('aria-pressed', 'false');
+    botonLectura.setAttribute('aria-pressed', 'true');
+  }
+  function verImprenta() {
+    origen.forEach(function (o) { o.padre.appendChild(o.panel); });
+    if (lectura.parentNode) lectura.remove();
+    hojas.forEach(function (h) { h.hidden = false; });
+    botonImprenta.setAttribute('aria-pressed', 'true');
+    botonLectura.setAttribute('aria-pressed', 'false');
+  }
+  function marcarGuias() { folleto.classList.toggle('con-guias', guias.checked); }
+
+  botonImprenta.addEventListener('click', verImprenta);
+  botonLectura.addEventListener('click', verLectura);
+  guias.addEventListener('change', marcarGuias);
+
+  var parametros = new URLSearchParams(location.search);
+  var vista = parametros.get('vista') || location.hash.slice(1);
+  if (vista === 'lectura' || (vista !== 'imprenta' && window.innerWidth < 800)) verLectura();
+  if (parametros.get('guias') === '1') { guias.checked = true; marcarGuias(); }
+  window.folletoListo = document.fonts ? document.fonts.ready : Promise.resolve();
+})();
+</script>
+</body>
+</html>
