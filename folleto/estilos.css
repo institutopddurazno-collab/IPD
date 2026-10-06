@@ -630,19 +630,19 @@ a { color: inherit; text-decoration: none; }
 .contra__nombre { display: block; margin-top: 0.6mm; font-weight: 700; font-size: 9pt; color: var(--azul); }
 
 /* ---------- Sombras suaves ---------- */
-/* Solo sombras difusas debajo de los elementos; los colores siguen planos */
+/* Solo sombras difusas y sutiles debajo de los elementos; los colores siguen planos */
 .insignia, .cifras__numero {
-  box-shadow: 0 0.7mm 1.4mm color-mix(in srgb, var(--c, var(--verde-vivo)) 35%, transparent), 0 1.8mm 3.6mm rgb(23 54 93 / 0.12);
+  box-shadow: 0 0.5mm 1mm color-mix(in srgb, var(--c, var(--verde-vivo)) 22%, transparent), 0 1.4mm 3mm rgb(23 54 93 / 0.07);
 }
-.sello { box-shadow: 0 0 0 1.2mm var(--papel), 0 1.6mm 3.2mm rgb(23 54 93 / 0.18); }
+.sello { box-shadow: 0 0 0 1.2mm var(--papel), 0 1.2mm 2.6mm rgb(23 54 93 / 0.11); }
 .pildora--solida, .abrir {
-  box-shadow: 0 0.8mm 1.6mm rgb(35 135 77 / 0.25), 0 2.6mm 6mm rgb(23 54 93 / 0.12);
+  box-shadow: 0 0.6mm 1.2mm rgb(35 135 77 / 0.15), 0 2mm 5mm rgb(23 54 93 / 0.07);
 }
-.pildora--suave { box-shadow: 0 0.6mm 1.2mm rgb(23 54 93 / 0.08), 0 2.4mm 5mm rgb(23 54 93 / 0.08); }
-.tarjeta, .qr { box-shadow: 0 0.6mm 1.2mm rgb(23 54 93 / 0.06), 0 3mm 7mm rgb(23 54 93 / 0.09); }
-.qr__codigo { box-shadow: 0 0.5mm 1.2mm rgb(23 54 93 / 0.10), 0 1.6mm 3.5mm rgb(23 54 93 / 0.06); }
-.especialidades li > div { box-shadow: 0 0.5mm 1.1mm rgb(23 54 93 / 0.07), 0 1.6mm 3.5mm rgb(23 54 93 / 0.05); }
-.encabezado__texto { box-shadow: 0 0.4mm 1mm rgb(23 54 93 / 0.08); }
+.pildora--suave { box-shadow: 0 0.4mm 1mm rgb(23 54 93 / 0.05), 0 1.8mm 4mm rgb(23 54 93 / 0.05); }
+.tarjeta, .qr { box-shadow: 0 0.4mm 1mm rgb(23 54 93 / 0.04), 0 2.2mm 5.5mm rgb(23 54 93 / 0.06); }
+.qr__codigo { box-shadow: 0 0.4mm 1mm rgb(23 54 93 / 0.06), 0 1.2mm 3mm rgb(23 54 93 / 0.04); }
+.especialidades li > div { box-shadow: 0 0.4mm 0.9mm rgb(23 54 93 / 0.045), 0 1.2mm 3mm rgb(23 54 93 / 0.035); }
+.encabezado__texto { box-shadow: 0 0.3mm 0.8mm rgb(23 54 93 / 0.05); }
 /* Sombra del logo de la portada (un círculo transparente del tamaño del logo) */
 .portada__sombra {
   position: absolute;
@@ -652,7 +652,7 @@ a { color: inherit; text-decoration: none; }
   height: 46.08mm;
   margin-left: -23.04mm;
   border-radius: 50%;
-  box-shadow: 0 0.8mm 1.5mm rgb(23 54 93 / 0.12), 0 3mm 6mm rgb(23 54 93 / 0.16);
+  box-shadow: 0 0.6mm 1.2mm rgb(23 54 93 / 0.08), 0 2.4mm 5mm rgb(23 54 93 / 0.10);
 }
 
 /* ---------- Pantallas chicas ---------- */
